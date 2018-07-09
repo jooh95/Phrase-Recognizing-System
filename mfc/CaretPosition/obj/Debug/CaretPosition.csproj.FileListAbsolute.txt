@@ -1,0 +1,9 @@
+A:\desktop\CaretPosition_Source_Files\CaretPosition\CaretPosition\bin\Debug\CaretPosition.exe
+A:\desktop\CaretPosition_Source_Files\CaretPosition\CaretPosition\bin\Debug\CaretPosition.pdb
+A:\desktop\CaretPosition_Source_Files\CaretPosition\CaretPosition\obj\Debug\CaretPosition.csprojAssemblyReference.cache
+A:\desktop\CaretPosition_Source_Files\CaretPosition\CaretPosition\obj\Debug\CaretPosition.frmTooltip.resources
+A:\desktop\CaretPosition_Source_Files\CaretPosition\CaretPosition\obj\Debug\CaretPosition.Properties.Resources.resources
+A:\desktop\CaretPosition_Source_Files\CaretPosition\CaretPosition\obj\Debug\CaretPosition.csproj.GenerateResource.cache
+A:\desktop\CaretPosition_Source_Files\CaretPosition\CaretPosition\obj\Debug\CaretPosition.csproj.CoreCompileInputs.cache
+A:\desktop\CaretPosition_Source_Files\CaretPosition\CaretPosition\obj\Debug\CaretPosition.exe
+A:\desktop\CaretPosition_Source_Files\CaretPosition\CaretPosition\obj\Debug\CaretPosition.pdb
