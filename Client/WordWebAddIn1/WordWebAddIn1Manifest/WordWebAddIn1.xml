@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Created:ce44715c-8c4e-446b-879c-ea9ebe0f09c8-->
+<OfficeApp 
+          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+          xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+          xsi:type="TaskPaneApp">
+
+  <!-- 기본 설정 시작: 재정의가 지정되지 않은 한 모든 Office 버전에 사용되는 추가 기능 메타데이터입니다. -->
+
+  <!-- 중요! ID는 추가 기능별로 고유해야 합니다. 이 매니페스트를 다시 사용하려면 이 ID를 새 GUID로 변경해야 합니다. -->
+  <Id>571698d7-2c90-442f-b362-df5b24b67d5a</Id>
+
+  <!--버전. 버전 변경이 있을 경우 트리거되는 저장소에서만 업데이트됩니다. -->
+  <Version>1.0.0.0</Version>
+  <ProviderName>[공급자 이름]</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <!-- 추가 기능의 표시 이름. 저장소에서 사용되며, 추가 기능 대화 상자와 같은 Office UI에 다양하게 배치됩니다. -->
+  <DisplayName DefaultValue="Paper Cat" />
+  <Description DefaultValue="Paper Cat"/>
+
+  <!-- 추가 기능 아이콘. 설치 화면과 추가 기능 대화 상자에서 사용됩니다. -->
+  <IconUrl DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+
+  <!-- 탐색 시 허용될 도메인. 예를 들어 ShowTaskpane을 사용하고 href 링크가 포함되어 있으면 해당 도메인이 이 목록에 있는 경우에만 탐색이 허용됩니다. -->
+  <AppDomains>
+    <AppDomain>https://www.baidu.com</AppDomain>
+    <AppDomain>https://www.facebook.com</AppDomain>
+    <AppDomain>https://cors-anywhere.herokuapp.com/http://localhost:61485/Result.html</AppDomain>
+  </AppDomains>
+  <!--기본 설정을 종료합니다. -->
+  
+  <!--작업창 모드 통합을 시작합니다. 이 섹션은 VersionOverrides가 없는 경우에 사용되거나 Office 클라이언트 버전이 추가 기능 명령을 지원하지 않은 경우에 사용됩니다. -->
+  <Hosts>
+    <Host Name="Document" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="~remoteAppUrl/Home.html" />
+  </DefaultSettings>
+  <!-- 작업창 모드 통합을 종료합니다.  -->
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <!-- 추가 기능 명령 모드 통합을 시작합니다. -->
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    
+    <!-- 호스트 노드가 필요합니다. -->
+    <Hosts>
+      <!-- 각 호스트에는 서로 다른 명령 집합이 있을 수 있습니다. -->
+      <!-- Excel 호스트는 통합문서이고 Word 호스트는 문서이며 PowerPoint 호스트는 프레젠테이션입니다. -->
+      <!-- 재정의하는 호스트가 매니페스트의 맨 위 섹션에서 선언된 호스트와 일치해야 합니다. -->
+      <Host xsi:type="Document">
+        <!-- 폼 팩터. 현재 DesktopFormFactor만 지원됩니다. -->
+        <DesktopFormFactor>
+          <!--"이 코드를 사용하여 개별 설치 시 추가 기능이 로드되면 표시할 메시지를 사용자 지정할 수 있습니다."-->
+          <GetStarted>
+            <!-- 시작 설명의 제목입니다. ShortString 리소스에 대한 resid 지점 -->
+            <Title resid="Contoso.GetStarted.Title"/>
+
+            <!-- 시작 설명의 설명입니다. LongString 리소스에 대한 resid 지점 -->
+            <Description resid="Contoso.GetStarted.Description"/>
+
+            <!-- 추가 기능을 사용해야 하는 방법을 자세히 설명하는 URL 리소스를 가리킵니다. -->
+            <LearnMoreUrl resid="Contoso.GetStarted.LearnMoreUrl"/>
+          </GetStarted>
+          <!-- 함수 파일은 ExecuteAction에 필요한 함수를 호출할 Javascript가 포함된 html 페이지입니다.              FunctionFile을 코드 숨김 ExecuteFunction으로 간주하세요. -->
+          <FunctionFile resid="Contoso.DesktopFunctionFile.Url" />
+
+          <!-- PrimaryCommandSurface는 주요 Office 리본입니다. -->
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <!-- 기존 탭을 확장하려면 OfficeTab을 사용하고, 새 탭을 만들려면 CustomTab을 사용하세요. -->
+            <OfficeTab id="TabHome">
+              <!-- 그룹에 대해 고유 ID를 제공해야 합니다. ID는 회사 이름을 사용하는 네임스페이스로 지정하는 것을 권장합니다. -->
+              <Group id="Contoso.Group1">
+                <!-- 그룹에 대한 레이블입니다. resid는 ShortString 리소스를 가리켜야 합니다. -->
+                <Label resid="Contoso.Group1Label" />
+                <!-- 아이콘. 필수 크기는 16, 32, 80이며, 옵션으로 20, 24, 40, 48, 64를 추가할 수 있습니다. 훌륭한 UX를 원할 경우 모든 크기를 제공하는 것이 좋습니다. -->
+                <!-- PNG 아이콘을 사용하세요. 리소스 섹션에 있는 모든 URL은 반드시 HTTPS를 사용해야 합니다. -->
+                <Icon>
+                  <bt:Image size="16" resid="Contoso.tpicon_16x16" />
+                  <bt:Image size="32" resid="Contoso.tpicon_32x32" />
+                  <bt:Image size="80" resid="Contoso.tpicon_80x80" />
+                </Icon>
+
+                <!-- 컨트롤. "단추" 또는 "메뉴" 형식으로 지정할 수 있습니다. -->
+                <Control xsi:type="Button" id="Contoso.TaskpaneButton">
+                  <Label resid="Contoso.TaskpaneButton.Label" />
+                  <Supertip>
+                    <!-- 도구 설명 제목. resid는 ShortString 리소스를 가리켜야 합니다. -->
+                    <Title resid="Contoso.TaskpaneButton.Label" />
+                    <!-- 도구 설명에 대한 설명. resid는 LongString 리소스를 가리켜야 합니다. -->
+                    <Description resid="Contoso.TaskpaneButton.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Contoso.tpicon_16x16" />
+                    <bt:Image size="32" resid="Contoso.tpicon_32x32" />
+                    <bt:Image size="80" resid="Contoso.tpicon_80x80" />
+                  </Icon>
+
+                  <!-- 명령을 트리거할 때 발생합니다(예: 리본 클릭). 지원되는 작업은 ExecuteFunction 또는 ShowTaskpane입니다. -->
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <!-- 작업창에 표시할 위치에 대한 URL 리소스 ID를 제공합니다. -->
+                    <SourceLocation resid="Contoso.Taskpane.Url" />
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    
+    <!-- 호스트와 폼 팩터 전체에서 리소스를 사용할 수 있습니다. -->
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Contoso.tpicon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
+        <bt:Image id="Contoso.tpicon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+        <bt:Image id="Contoso.tpicon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="Contoso.DesktopFunctionFile.Url" DefaultValue="~remoteAppUrl/Functions/FunctionFile.html" />
+        <bt:Url id="Contoso.Taskpane.Url" DefaultValue="~remoteAppUrl/Home.html" />
+        <bt:Url id="Contoso.GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812" />
+      </bt:Urls>
+      <!-- ShortStrings 최대 문자 길이==125. -->
+      <bt:ShortStrings>
+        <bt:String id="Contoso.TaskpaneButton.Label" DefaultValue="Show Taskpane" />
+        <bt:String id="Contoso.Group1Label" DefaultValue="Commands Group" />
+        <bt:String id="Contoso.GetStarted.Title" DefaultValue="Get started with your sample add-in!" />
+      </bt:ShortStrings>
+      <!-- LongStrings 최대 문자 길이==250. -->
+      <bt:LongStrings>
+        <bt:String id="Contoso.TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane" />
+        <bt:String id="Contoso.GetStarted.Description" DefaultValue="Your sample add-in loaded succesfully. Go to the HOME tab and click the 'Show Taskpane' button to get started." />
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+  <!-- 추가 기능 명령 모드 통합을 종료합니다. -->
+
+</OfficeApp>
