@@ -29,7 +29,7 @@
         var xmlhttp = new XMLHttpRequest();
 
         // Or post, etc
-        xmlhttp.open("GET", proxy + myUrl + '?key=AIzaSyBCXxskVOciO7tlqD7-RR56MrFQGitL-30&q=' + dragged + '&source=en&target=ko&format=text', true);
+        xmlhttp.open("GET", proxy + myUrl + '?key=' + dragged + '&source=en&target=ko&format=text', true);
 
         xmlhttp.send();
 
