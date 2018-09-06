@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Paper Cat</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!--<link href="Main.css" rel="stylesheet" type="text/css" />-->
+
+    <script src="Scripts/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="Scripts/FabricUI/MessageBanner.js" type="text/javascript"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+
+    <script src="Result.js" type="text/javascript"></script>
+
+    <!-- Office.js에 대한 로컬 참조를 사용하여 오프라인 디버깅을 사용하도록 설정하려면 다음을 사용합니다.                        -->
+    <!-- <script src="Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
+    <!-- <script src="Scripts/Office/1/office.js" type="text/javascript"></script>  -->
+    <!-- Office UI Fabric에 대한 자세한 내용을 보려면 http://aka.ms/office-ui-fabric으로 이동하세요. -->
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css">
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css">
+
+    <!-- Office UI Fabric을 오프라인으로 사용할 수 있게 하려면 다음을 사용하세요. -->
+    <!-- link rel="stylesheet" href="Content/fabric.min.css" -->
+    <!-- link rel="stylesheet" href="Content/fabric.components.min.css" -->
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1>Paper Cat</h1>
+            <p>논문 작성 어시스턴트</p>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Content -->
+            <section id="content" class="main" style="padding-top: 1em;">
+                <ul class="actions special">
+                    <li><a class="button primary" id="rec_button">추천 하기</a></li>
+                </ul>
+                <!--<div style="vertical-align: center">-->
+                <!--<a href="generic.html" class="button primary"style="vertical-align: center">Get Started</a>-->
+                <!--<a href="generic.html" class="button"style="vertical-align: center">Learn More</a>-->
+                <!--</div>-->
+                <h2>추천 결과 </h2>
+
+
+                <div id="r_result">
+                    <ul>
+
+                    </ul>
+                </div>
+                <h2>번역 결과</h2>
+                <div id="r_google">
+                    <ul>
+
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+
+            <section>
+                <ul class="actions">
+                    <li><a href="./Home.html" class="button" id="back_button">홈으로</a></li>
+                </ul>
+                <h2>Team JCO</h2>
+                <p>소프트웨어 마에스트로 9기 장최오 팀.</p>
+                <ul class="actions">
+                    <!--<li><a href="generic.html" class="button">Learn More</a></li>-->
+                </ul>
+            </section>
+            <section>
+                <h2>Contact Us</h2>
+                <dl class="alt">
+                    <dt>Address</dt>
+                    <dd>서울 강남구 테헤란로 311 아남타워 7층</dd>
+                    <dt>Phone</dt>
+                    <dd>010-4100-1407</dd>
+                    <dt>Email</dt>
+                    <dd><a href="#">strutive07@gmail.com</a></dd>
+                </dl>
+                <ul class="icons">
+                    <li><a href="#" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
+                    <li><a href="https://github.com/jooh95/Phrase-Recognizing-System" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
+                    <li><a href="#" class="icon fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+                </ul>
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
