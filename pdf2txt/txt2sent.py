@@ -1,6 +1,8 @@
 import re
 import nltk
 
+parts = ['abstract', 'content']
+
 
 def extract_sents(text):
     # Reference 제거
@@ -11,7 +13,7 @@ def extract_sents(text):
     text = text[:ref_start]
 
     # spliting abstract and contents
-    txt = {'abstract': '', 'content': ''}
+    txt = {part: '' for part in parts}
     Abstract_start = text.find('Abstract')
     ABSTRACT_start = text.find('ABSTRACT')
     if Abstract_start == -1 and ABSTRACT_start == -1:  # 'Abstract', 'ABSTRACT'를 못 찾은 경우

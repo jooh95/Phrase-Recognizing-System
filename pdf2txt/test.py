@@ -1,3 +1,4 @@
-import pdfConverter as pt
+lis = ['abstract', 'content']
+dic = {part: '' for part in lis}
 
-print(pt.convert_pdf_to_txt('pdfData/HOO10008.pdf'))
+print(dic)

@@ -1,0 +1,2873 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		
+		
+	<link type="text/css" media="screen" href="https://cdn.openpublishing.com/stylus/storefront/index.styl?brand_id=1&r=c78765" rel="stylesheet">
+	<link type="text/css" media="screen" href="https://cdn.openpublishing.com/combine.css?file=grin-custom.css;grin-frameset.css;grin.css&type=brand&brand_id=1&r=c78765" rel="stylesheet"/>
+
+
+		
+		<title>
+			
+			Quality Assurance in Agile Methodology | Publish your master's thesis, bachelor's thesis, essay or term paper
+			
+		</title>
+	
+		
+	<link rel="shortcut icon" href="https://cdn.openpublishing.com/images/brand-static/1/favicon.ico">
+
+	<!-- Apple Favicons
+	================================================== -->
+	<link rel="apple-touch-icon" href="https://cdn.openpublishing.com/images/brand/1/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://cdn.openpublishing.com/images/brand/1/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://cdn.openpublishing.com/images/brand/1/apple-touch-icon-114x114.png">
+
+
+		
+
+	
+	
+	
+
+
+	
+		<meta property="og:image" content="https://cdn.openpublishing.com/images/cover/brand/e-book/1/432082_big.jpg" />
+	
+		<meta property="og:site-name" content="Publish your eBook as eBook and book" />
+	
+		<meta name="robots" content="index,follow,noarchive,noodp" />
+	
+		<meta name="keywords" content="Academic Paper,quality,assurance,agile,methodology" />
+	
+		<meta name="description" content="Quality Assurance in Agile Methodology - Syed Hassan Shah - Academic Paper - Computer Science - Software - Publish your bachelor&#39;s or master&#39;s thesis, dissertation, term paper or essay" />
+	
+		<meta property="og:title" content="GRIN - Quality Assurance in Agile Methodology" />
+	
+
+	
+	
+		
+	
+		
+	
+		
+			<link rel="canonical" href="https://www.grin.com/document/432082" />
+		
+	
+		
+	
+		
+	
+		
+	
+
+
+	
+	
+		
+		<link rel="alternate" media="only screen and (max-device-width: 640px)" href="https://m.grin.com/document/432082">
+		<script>
+			(function() {
+				var mobile_redirect_cookie_name = 'grin-live-force-storefront';
+				if( matchMedia('only screen and (max-device-width: 640px)').matches
+					&& document.cookie.indexOf(mobile_redirect_cookie_name + '=desktop') == -1)
+				{
+					document.location.href = 'https://m.grin.com/document/432082';
+				}
+			}());
+		</script>
+	
+
+
+
+		
+	
+	<script type="text/javascript">
+		
+
+		
+		var global = this;
+		Grin = {Loader: {}};
+		Grin.Loader.active_combine_groups = {};
+		Grin.Loader.waiting_combine_fns = {};
+		Grin.Loader.combine_dependencies = {};
+		Grin.Loader.requested_groups = {};
+
+		Grin.Loader.activate_group = function(group_name) {
+			/*console.log("Activate " + group_name); //greetings to IE, who crashes when Entwicklertools are closed*/
+			Grin.Loader.waiting_combine_fns[group_name].call(global);
+			delete Grin.Loader.waiting_combine_fns[group_name];
+			delete Grin.Loader.combine_dependencies[group_name];
+			Grin.Loader.active_combine_groups[group_name] = true;
+
+			for(var key in Grin.Loader.combine_dependencies) {
+				var dep_arr = Grin.Loader.combine_dependencies[key];
+				var idx = dep_arr.indexOf(group_name);
+				if(idx != -1) {
+					dep_arr.splice(idx,1);
+				}
+				if (!dep_arr.length) {
+					Grin.Loader.activate_group(key);
+				}
+			}
+		};
+
+		Grin.Loader.request_activation = function(group_name, dependencies, group_fn)
+		{
+			if(Grin.Loader.requested_groups[group_name]) {
+				throw "group already requested: " + group_name;
+			}
+			Grin.Loader.requested_groups[group_name] = true;
+			Grin.Loader.waiting_combine_fns[group_name] = group_fn;
+			Grin.Loader.combine_dependencies[group_name] = [];
+
+			var must_wait = false;
+			for(var i = 0; i< dependencies.length; ++i) {
+				var dep = dependencies[i];
+				if(!Grin.Loader.active_combine_groups[dep]) {
+					Grin.Loader.combine_dependencies[group_name].push(dep);
+					must_wait = true;
+				}
+			}
+
+			if(!must_wait) {
+				Grin.Loader.activate_group(group_name);
+			}
+		};
+
+		Grin.Ready = function(fn) {
+			if(Grin.Ready.ready_triggered) {
+				fn();
+			}
+			else {
+				Grin.Ready.ready_queue.push(fn);
+			}
+		};
+		Grin.Ready.ready_queue = [];
+		Grin.Ready.dependencies = [];
+		
+	</script>
+
+
+	
+
+	
+
+    <script async type="text/javascript" src="https://cdn.openpublishing.com/group/js/libs.js?brand_id=1&r=c78765"></script>
+<script type="text/javascript">Grin.Ready.dependencies.push('libs.js');</script>
+	<script async type="text/javascript" src="https://cdn.openpublishing.com/group/js/core.js?brand_id=1&r=c78765"></script>
+<script type="text/javascript">Grin.Ready.dependencies.push('core.js');</script>
+
+    <script async type="text/javascript" src="https://cdn.openpublishing.com/basedata.js?lang=en&brand_id=1&gtpl-template-scope=storefront&r=c78765"></script>
+<script type="text/javascript">Grin.Ready.dependencies.push('basedata.js');</script>
+
+    
+
+    
+	
+	
+	<script type="text/javascript" src="https://cdn.openpublishing.com/combine.js?file=blockadblock.js&type=brand&brand_id=1&async_loader_code=yes&async_dependencies=world.js&r=c78765"></script>
+<script type="text/javascript">Grin.Ready.dependencies.push('blockadblock.js');</script>
+	
+	<script src="//cdn.optimizely.com/js/2466641553.js"></script>
+	<script src="//ad461fce980a44a087703a630ff4c20b.js.ubembed.com" async></script>
+	<script>
+	
+		var gaProperty = 'UA-183178-2';
+		var disableStr = 'ga-disable-' + gaProperty;
+		if (document.cookie.indexOf(disableStr + '=true') > -1) { window[disableStr] = true; }
+		function gaOptout() {
+			document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=.grin.com';
+			window[disableStr] = true; 
+		}
+	 
+	</script>
+
+
+	
+		<script async type="text/javascript" src="https://cdn.openpublishing.com/group/js/world.js?brand_id=1&r=c78765"></script>
+<script type="text/javascript">Grin.Ready.dependencies.push('world.js');</script>
+	
+
+	
+		
+		
+	
+
+		
+	</head>
+	<body class="other_browser other_os handler-document    page-document  testgroupB protocol-http"  data-grin-handler="document">
+		
+	
+	
+	<script>
+		dataLayer = [{
+			'test_group': 'B',
+			'test_gang': 'WEST',
+			'test_bunch': '3'
+		}];
+	</script>
+
+	
+	
+		<!-- Google Tag Manager -->
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N4P5KV"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-N4P5KV');</script>
+		
+		<!-- End Google Tag Manager -->
+	
+
+
+
+		
+	
+	
+	
+		<div id="register-login-popup" class="popup" data-foldable-container data-foldable-id="register-login-popup" data-no-slide>
+			
+				<div class="popup-overlay"></div>
+			
+			<div class="popup-content">
+				<span class="close-icon close" data-foldable-trigger data-foldable-id="register-login-popup"></span>
+				
+	<div class="itemTitle popupHeader">Register or log in</div>
+	<div class="cbox register">
+		
+	<div class="itemTitle">New here?</div>
+	<p class="info newauthors">For new authors:<br/>free, easy and fast</p>
+	<form id="register-form"  onsubmit="return false;">
+		<div class="required-fields-hint">* Required Fields</div>
+		<br>
+		<input type="hidden" name="language" value="en"/>
+		<div class="form-row first_name">
+			<label>First Name*</label>
+			<input type="text" name="first_name"/>
+		</div>
+		<div class="form-row last_name">
+			<label>Last Name*</label>
+			<input type="text" name="last_name"/>
+		</div>
+		<div class="form-row email">
+			<label>E-Mail*</label>
+			<input type="email" name="email"/>
+		</div>
+		<div class="form-row password">
+			<label>Password*</label>
+			<input type="password" name="password"/>
+		</div>
+
+		
+
+	<div class="form-row ambassador">
+		<label>Optional: Ambassador code</label>
+		<input type="text" name="ambassador"/>
+		<input type="hidden" name="amb-strict" value="yes"/>
+	</div>
+
+	<div class="form-row infomail">
+			<div data-widget="Hint" class="hint hint-icon">
+			<div class="hint-target"></div>
+			<div data-hint-text class="hint-text">
+				Our newsletter keeps you up to date with all new papers in your subjects
+			</div>
+		</div>
+	</div>
+
+
+		<div class="button-form-row">
+			<button type="submit" name="submit">
+				<span>Register</span>
+			</button>
+		</div>
+	</form>
+
+	</div>
+	<div class="cbox login">
+		
+	<div class="itemTitle">Login</div>
+	<p class="info existing-authors">For registered authors</p>
+	<form id="login-form" onsubmit="return false;">
+		<div class="required-fields-hint">* Required Fields</div>
+		<br>
+
+		<div class="form-row email">
+			<label>E-Mail*</label>
+			<input type="email" name="username"/>
+		</div>
+		<div class="form-row password">
+			<label>Password*</label>
+			<input type="password" name="password"/>
+		</div>
+		<p class="lost-password-link">
+			<a id="goto-lost-password" href="javascript:void(0);">Forgot Password?</a>
+		</p>
+		<div class="button-form-row">
+			<button type="submit" name="submit">
+				<span>Login</span>
+			</button>
+		</div>
+	</form>
+
+	</div>
+	
+		<div class="cbox social-connect">
+			
+	
+		<div class="itemTitle">The alternative</div>
+		<div class="facebook-connect-area">
+			<a data-facebook-login class="cursor-pointer fb_button">
+				<img class="fb_image_large" src="https://cdn.openpublishing.com/images/icons/facebook_icon_large.jpg" alt="">
+				<span class="fb_button_text">Connect with Facebook</span>
+			</a>
+		</div>
+	
+
+			
+	
+		<div class="google-connect-area">
+			<a data-google-login class="cursor-pointer google_button">
+				<img class="google_image" src="https://cdn.openpublishing.com/images/icons/google.gif" alt="Google icon">
+				<span class="google_button_text">Connect with Google</span>
+			</a>
+		</div>
+	
+
+		</div>
+	
+
+			</div>
+		</div>
+	
+
+
+	
+	
+	
+		<div id="lost-password-popup" class="popup" data-foldable-container data-foldable-id="lost-password-popup" data-no-slide>
+			
+				<div class="popup-overlay"></div>
+			
+			<div class="popup-content">
+				<span class="close-icon close" data-foldable-trigger data-foldable-id="lost-password-popup"></span>
+				
+	<h2 class="itemTitle">Forgot Password?</h2>
+	<div class="cbox lostpassword">
+		
+	<div class="itemTitle">Request a new password via email.</div>
+	<form id="lost-password-form"  onsubmit="return false;">
+		<input type="hidden" name="language" value="en"/>
+		<div class="form-row email">
+			<label>E-Mail</label>
+			<input type="text" name="email"/>
+		</div>
+		<div class="button-form-row">
+			<button type="submit" name="submit">
+				<span>Send</span>
+			</button>
+		</div>
+	</form>
+
+	</div>
+
+			</div>
+		</div>
+	
+
+
+		
+      <div class="notifications"></div>
+      <div class="notifications shorties"></div>
+
+
+		<div class="site-wrapper">
+			
+
+	
+		<div class="admirror" style="position: relative">
+			<div id="Site_superbanner" style="height: 90px; width: 990px"></div>
+			<div id="skyscraperAd" style="position: absolute; left: 1013px; top: 117px; z-index: 9;"></div>
+		</div>
+	
+
+	<div class="header">
+		<div class="identity">
+			
+
+				
+					<a href="https://www.grin.com/"><img src="https://cdn.openpublishing.com/images/brand/1/grin-logo-en.png" class="" alt="English Logo Alt" border="0"></a>
+				
+
+			
+
+		</div>
+		
+	<div id="userinfo" data-editor="Gtpl_Editor" data-template="Widget.UserInfo.Main" data-template-namespaces="Widget.UserInfo" data-no-redraw data-no-fx data-skip-first-draw>
+		
+	<div class="top-info">
+			<a class="etrusted" href="https://www.grin.com/en/help/buyers#payment">
+				<img src="https://cdn.openpublishing.com/images/brand/1/trusted-shops.png" class="etrusted-logo" alt="https://cdn.openpublishing.com/images/brand/1/trusted-shops.png" border="0">
+			</a>
+
+		
+	
+
+
+		
+	
+		<div class="top-shopping-cart with-small-rounded-corners" style="cursor:default;">
+	
+	<span class="shopping-cart-info">
+		<span class="p5px-right" style="display: block;">
+			
+				<span class="wk-link"><a href="https://www.grin.com/shoppingcart" style="text-decoration: none"><b>0 Items</b></a></span>
+			
+			<br/>
+		</span>
+	</span>
+	
+		</div>
+	
+
+
+		<div class="user-info">
+			 
+				
+	<span data-widget="LanguageSelector" id="language-select-span" class="top-dropdown-menu">
+		<a href="javascript:void(0);" id="language-select-trigger">English</a>
+		<ul id="language-selector" style="display:none;">
+			
+				<li><a href="javascript:void(0);" data-grin-lang="de">Deutsch</a></li>
+			
+			
+			
+				<li><a href="javascript:void(0);" data-grin-lang="es">Español</a></li>
+			
+			
+				<li><a href="javascript:void(0);" data-grin-lang="fr">Français</a></li>
+			
+		</ul>
+	</span>
+
+			
+
+			<span class="top-login m2px-top" style="right: -30px;">
+				
+						
+	
+		<a href="javascript:void(0);" class="login-trigger login-reload">Login</a>
+	
+
+				
+			</span>
+		</div>
+	</div>
+
+	</div>
+
+	</div>
+	
+	<div class="nav">
+		<div class="main-menu">
+			<ul>
+				
+                <li class="nav_left"
+        		>
+				<a href="https://www.grin.com/">Home</a>
+				
+                <div class="arrow-bottom"
+        		>
+				</div>
+					
+                	<li class="nav_main"
+        			>
+					<a href="https://www.grin.com/en/catalog/">Subjects</a>
+					
+                	<div class="arrow-bottom"
+        			>
+					</div>
+				</li>
+				
+						
+	                	<li class="nav_main"
+	        			>
+						<a href="https://www.grin.com/en/help/author">Help</a>
+						
+                		<div class="arrow-bottom"
+        				></div>
+					</li>
+				
+			</ul>
+		</div>
+		<div class="nav_bg">
+			<div class="search">
+				
+	
+	
+	
+		
+	<form class="search" action="https://www.grin.com/search">
+		<div class="main-search-widget">
+			<input data-widget="SearchTagAutocomplete" type="text" class="search-input" name="searchstring" value="" placeholder="202,075 eBooks & books"/>
+			<input class="main-magnifier-trigger" type="submit" value=""></input> 
+		</div>
+		
+		
+	<input name="product" type="hidden" value="ebook"/>
+	<input name="source_type" type="hidden" value="document" />
+	<input name="field" type="hidden" value="title,subtitle,data"/>
+
+
+		<button class="search-button" type="submit">
+			<span>Search</span>
+		</button>
+	</form>
+
+
+			</div>
+			<div class="header-items">
+				
+					<a href="https://www.grin.com/en/upload" class="uploadBtn gradient"><span class="button-text">Upload papers</span><span class="button-icon"></span></a>
+				
+			</div>
+		</div>
+		<div class="nav_right">
+		</div>
+	</div>
+
+			
+	<div class="page right-sidebar "data-guid="document.432082"   itemscope itemtype="http://schema.org/Book" >
+
+			
+				<div class="heading page-wrapper">
+					
+	
+		
+	<div class="breadcrumbs">
+		
+
+			<a href="https://www.grin.com/">Homepage</a>&#160;&gt;&#160;
+			
+				<a href="https://www.grin.com/en/catalog/">Catalog</a>&#160;&gt;&#160;
+			
+				<a href="https://www.grin.com/en/catalog/subject/104">Computer Science</a>&#160;&gt;&#160;
+			
+			
+				<a href="https://www.grin.com/en/catalog/subject/98">Software</a>
+			
+
+		
+	</div>
+
+	
+
+				</div>
+			
+			<div class="main page-wrapper">
+				
+
+	
+	<section class="page-document-top cbox">
+		<section class="picturebox">
+			
+	
+		<a data-foldable-trigger href="javascript:void(0);" data-poi="CLICK_FLASH_grin" data-foldable-id="document-preview-popup">
+			<div class="flash-preview-button">
+				<span class="caption">Read the ebook</span>
+			</div>
+			<img src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/432082_big.jpg" alt="Title: Quality Assurance in Agile Methodology" itemprop="image" class="picture-big"/>
+		</a>
+	
+
+		</section>
+		<section class="meta">
+			
+	
+		<h1 class="heading1 title">
+			Quality Assurance in Agile Methodology
+		</h1>
+	
+	
+
+	
+		
+	<p class="misc">
+		Academic Paper, 2018
+		<br />33 Pages, Grade: 3.5
+	</p>
+
+	
+		<p class="subject">
+			<a href="https://www.grin.com/en/catalog/subject/98">Computer Science - Software</a>
+		</p>
+	
+
+	
+
+			
+
+	
+		<form class="buybox" method="post" action="https://www.grin.com/shoppingcart">
+			<input type="hidden" name="method" value="add"/>
+			<input type="hidden" name="source_type" value="document"/>
+			<input type="hidden" name="reference_id" value="432082"/>
+			<input type="hidden" name="test_group" value="B"/>
+			<input type="hidden" name="test_gang" value="WEST"/>
+			<input type="hidden" name="test_bunch" value="3"/>
+			<input type="hidden" name="test_brand" value="grin-https"/>
+			<input type="hidden" name="test_button_id" value="top"/>
+			<input type="hidden" name="partner_id" value="0"/>
+
+			<div class="products">
+				
+				
+
+				
+					
+						
+	
+
+	<label class="product">
+		<input class="product-radiobutton" type="radio" name="product" value="ebook" checked>
+		
+	<div class="line1">
+		eBook&nbsp;for only&nbsp;
+		<b class="price">
+			US$ 15.99
+		</b>
+	</div>
+	<div class="line2">
+			Download immediately. Incl. VAT
+	</div>
+		<div class="formatinfo">
+			<b>Format:</b> PDF
+			&nbsp;&ndash;&nbsp;for PC, Kindle, tablet, mobile
+		</div>
+
+	</label>
+
+						
+					
+					
+				
+
+				
+
+				
+					
+	
+		<hr class="products-separator">
+	
+
+	<label class="product">
+		<input class="product-radiobutton" type="radio" name="product" value="book" >
+		
+	<div class="line1">
+		Book for only&nbsp;
+		<b class="price">
+			US$ 19.50
+		</b>
+	</div>
+	<div class="line2">
+		
+			Shipping worldwide
+		
+	</div>
+
+	</label>
+
+					
+					
+				
+			</div>
+
+			
+				<div class="buybox-button">
+					<button type="submit" class="call-to-action">
+						<span class="button-text">Add to cart</span>
+						<span class="button-icon"></span>
+					</button>
+				</div>
+			
+		</form>
+
+	
+
+			
+
+		</section>
+		<div class="clear-all"></div>
+	</section>
+
+
+	
+	
+	
+	<section class="page-document-middlesection page-document-overview cbox">
+		
+
+		
+
+	
+	
+	
+
+	
+	<section class="social">
+		
+
+	
+	
+		<div class="socialShareItem comments">
+			<a href="#comments" class="comment-button" data-scroll-target-id="create-comment-document-432082">
+				<span class="comment-caption">Add comment</span>
+				<span class="comment-icon"></span>
+			</a>
+			
+		</div>
+	
+
+
+	
+	<div class="socialShareItem facebook"  style="min-width: 115px;">
+		<div data-widget="FacebookShare" class="fb-like" data-href="https://www.grin.com/document/432082" data-share="true" data-layout="button_count" data-width="200" data-show-facepile="false">&nbsp;</div>
+	</div>
+
+	
+	<div  class="socialShareItem twitter">
+		<a data-widget="TwitterTweet" href="https://twitter.com/share" class="twitter-share-button" data-lang="en" style="min-width: 107px;">&nbsp;</a>
+	</div>
+
+	
+	
+	<div class="socialShareItem google-plus">
+		<div data-widget="GooglePlusOne" class="g-plusone" data-size="medium" data-annotation="inline" data-width="120" data-href="https://www.grin.com/document/432082"></div>
+	</div>
+
+
+		<div class="clear-all"></div>
+	</section>
+
+
+	
+		
+	
+		
+	
+		<section class="meta excerpt textHeading">
+			<h2 class="heading2 info">
+				Excerpt
+			</h2>
+		</section>
+		<section class="text excerpt xml-mode grin-document web">
+
+			
+
+			<div class="plain-preview" style="position: relative; width: 573.5px;"><div style="position: relative; width: 564.25px; height: 1081.325px;"><style type="text/css"><!-- .ft0 { font-size: 11.1px; font-family: Arial; }  .ft1 { font-size: 12.025px; font-family: Arial; }  .ft2 { font-size: 12.025px; font-family: Arial; } --></style><div style="position:absolute;top:930.55px;left:290.325px"><span class="ft0">v </span></div><div style="position:absolute;top:947.2px;left:21.15px"><span class="ft0"> </span></div><div style="position:absolute;top:132.275px;left:266.275px"><span class="ft1"><b>Abstract </b></span></div><div style="position:absolute;top:165.575px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:203.5px;left:21.15px"><span class="ft2">Quality Assurance activities, in software development, are the backbone of any software </span></div><div style="position:absolute;top:228.475px;left:21.15px"><span class="ft2">development. Quality Assurance activities are not only responsible of product quality, but </span></div><div style="position:absolute;top:253.45px;left:21.15px"><span class="ft2">also for process development quality. In conventional software development Quality </span></div><div style="position:absolute;top:278.425px;left:21.15px"><span class="ft2">Assurance is looked after by a separate team. As the trends of software development </span></div><div style="position:absolute;top:303.4px;left:21.15px"><span class="ft2">moved towards Agile development, Quality Assurance activities also got changed. In </span></div><div style="position:absolute;top:328.375px;left:21.15px"><span class="ft2">Agile development developers perform most of the activities such as close collaboration </span></div><div style="position:absolute;top:353.35px;left:21.15px"><span class="ft2">among developer team; onsite customer and Test Developers. Test Driven Development is </span></div><div style="position:absolute;top:378.325px;left:21.15px"><span class="ft2">the approaches in agile development to achieve better product quality. In this study I </span></div><div style="position:absolute;top:403.3px;left:21.15px"><span class="ft2">highlighted the importance of Quality Assurance in different Agile methodologies. </span></div><div style="position:absolute;top:429.2px;left:21.15px"><span class="ft2">Mindset of Agile development always revolves around product quality but there is much </span></div><div style="position:absolute;top:454.175px;left:21.15px"><span class="ft2">work to be done to impart quality of process in agile development to get it standardized </span></div><div style="position:absolute;top:479.15px;left:21.15px"><span class="ft2">and more organized product. Quality Assurance activities remain centric and focused to </span></div><div style="position:absolute;top:504.125px;left:21.15px"><span class="ft2">testing. In this study I have compared different Agile methodologies and also highlighted </span></div><div style="position:absolute;top:529.1px;left:21.15px"><span class="ft2">the factors of Quality Assurance in each Agile method which can be improve overall </span></div><div style="position:absolute;top:554.075px;left:21.15px"><span class="ft2">software development of any product using Agile method.  I proposed to add an extra </span></div><div style="position:absolute;top:579.05px;left:21.15px"><span class="ft2">layer of Quality Assurance in Agile projects. Purpose of inserting an extra layer, is to use </span></div><div style="position:absolute;top:604.025px;left:21.15px"><span class="ft2">the knowledge of Quality Assurance experts to achieve quality product in development </span></div><div style="position:absolute;top:629.925px;left:21.15px"><span class="ft2">process which will results in higher level of product quality. </span></div><div style="position:absolute;top:666.925px;left:21.15px"><span class="ft1"><b>Keywords:  </b>Quality Assurance (QA), Agile Development, Software Process </span></div><div style="position:absolute;top:691.9px;left:21.15px"><span class="ft2">Improvement(SPI) </span></div><div style="position:absolute;top:728.9px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:760.35px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:791.8px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:823.25px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:823.25px;left:192.275px"><span class="ft2"> </span></div><div style="position:absolute;top:854.7px;left:21.15px"><span class="ft2"> </span></div></div><hr style="display: block; border-bottom: 8px solid #f0f0f0; width: 610px; margin-left: -18px; height: 8px; border-top: none;"/><div style="position: relative; width: 564.25px; height: 1081.325px;"><style type="text/css"><!-- .ft3 { font-size: 11.1px; font-family: Arial; }  .ft4 { font-size: 14.8px; font-family: Arial; }  .ft5 { font-size: 11.1px; font-family: Arial; } --></style><div style="position:absolute;top:930.55px;left:267.2px"><span class="ft0">vi </span></div><div style="position:absolute;top:947.2px;left:-1.049999999999997px"><span class="ft0"> </span></div><div style="position:absolute;top:132.275px;left:217.25px"><span class="ft1"><b>Table </b></span></div><div style="position:absolute;top:133.2px;left:256.1px"><span class="ft3"><b>of </b></span></div><div style="position:absolute;top:132.275px;left:270.9px"><span class="ft1"><b>Contents</b></span></div><div style="position:absolute;top:130.425px;left:326.4px"><span class="ft4"><b> </b></span></div><div style="position:absolute;top:151.7px;left:-1.049999999999997px"><span class="ft0">Acknowledgment ... iv </span></div><div style="position:absolute;top:176.675px;left:-1.049999999999997px"><span class="ft0">Abstract ... v </span></div><div style="position:absolute;top:201.65px;left:-1.049999999999997px"><span class="ft0">Table of Contents ... vi </span></div><div style="position:absolute;top:225.7px;left:-1.049999999999997px"><span class="ft0">List of Figures ... viii </span></div><div style="position:absolute;top:250.675px;left:-1.049999999999997px"><span class="ft0">List of Tables ... ix </span></div><div style="position:absolute;top:275.65px;left:-1.049999999999997px"><span class="ft0">List of Abbreviations ... x </span></div><div style="position:absolute;top:300.625px;left:-1.049999999999997px"><span class="ft0">Chapter1. Introduction ... 1 </span></div><div style="position:absolute;top:324.675px;left:12.825px"><span class="ft0">1.1  Study Overview ... 1 </span></div><div style="position:absolute;top:349.65px;left:12.825px"><span class="ft0">1.2 Statement of the problem ... 2 </span></div><div style="position:absolute;top:374.625px;left:12.825px"><span class="ft0">1.3 Objectives of the study ...  2 </span></div><div style="position:absolute;top:399.6px;left:12.825px"><span class="ft0">1.4 Scope and Limitation ... 2 </span></div><div style="position:absolute;top:424.575px;left:12.825px"><span class="ft0">1.5 Significance of the study ...  3 </span></div><div style="position:absolute;top:449.55px;left:-1.049999999999997px"><span class="ft0">Chapter2. Review of related Literature ...  4 </span></div><div style="position:absolute;top:473.6px;left:12.825px"><span class="ft0">2.1 Quality Assurance ...  4 </span></div><div style="position:absolute;top:498.575px;left:25.775px"><span class="ft5"><i>2.1.1 Defect Management Approach</i> ...  5 </span></div><div style="position:absolute;top:523.55px;left:25.775px"><span class="ft5"><i>2.1.2 Quality attribute Approach</i> ... 6 </span></div><div style="position:absolute;top:548.525px;left:12.825px"><span class="ft0">2.2 Importance of Quality Assurance ... 7 </span></div><div style="position:absolute;top:572.575px;left:25.775px"><span class="ft5"><i>2.2.1    The Quality System of SQA</i> ... 7 </span></div><div style="position:absolute;top:597.55px;left:25.775px"><span class="ft5"><i>2.2.2    Technical Activities of SQA</i> ...  8 </span></div><div style="position:absolute;top:622.525px;left:25.775px"><span class="ft5"><i>2.2.3   Life Cycle Phase of SQA system Development</i> ... 8 </span></div><div style="position:absolute;top:647.5px;left:25.775px"><span class="ft5"><i>2.2.4   Methods of Software Life Cycle development</i> ... 8 </span></div><div style="position:absolute;top:671.55px;left:25.775px"><span class="ft5"><i>2.2.5   Standards of  SQA</i> ...  9 </span></div><div style="position:absolute;top:696.525px;left:25.775px"><span class="ft5"><i>2.2.6   Software Quality factors</i> ... 9 </span></div><div style="position:absolute;top:721.5px;left:25.775px"><span class="ft5"><i>2.2.7   Principle of Quality Development Process</i> ...  9 </span></div><div style="position:absolute;top:746.475px;left:25.775px"><span class="ft5"><i>2.2.8   SQA Methodologies</i>... 9 </span></div><div style="position:absolute;top:771.45px;left:-1.049999999999997px"><span class="ft0">Chapter 3.  Material and Methods ...  10 </span></div><div style="position:absolute;top:795.5px;left:12.825px"><span class="ft0">3.1 SDLC and Agile ...  10 </span></div><div style="position:absolute;top:820.475px;left:25.775px"><span class="ft5"><i>3.1.1 Introduction to SDLC</i> ...  10 </span></div><div style="position:absolute;top:845.45px;left:25.775px"><span class="ft5"><i>3.1.2 Definition of Quality and Agility</i> ...  10 </span></div><div style="position:absolute;top:870.425px;left:12.825px"><span class="ft0">3.2 Agile Methodology ... 11 </span></div><div style="position:absolute;top:895.4px;left:25.775px"><span class="ft5"><i>3.2.1 Twelve principles behind the Agile Methodology</i> ... 12 </span></div></div><hr style="display: block; border-bottom: 8px solid #f0f0f0; width: 610px; margin-left: -18px; height: 8px; border-top: none;"/><div style="position: relative; width: 564.25px; height: 1081.325px;"><style type="text/css"><!----></style><div style="position:absolute;top:930.55px;left:287.55px"><span class="ft0">vii </span></div><div style="position:absolute;top:947.2px;left:21.15px"><span class="ft0"> </span></div><div style="position:absolute;top:132.275px;left:47.975px"><span class="ft5"><i>3.2.2 QA in Agile</i> ... 12 </span></div><div style="position:absolute;top:157.25px;left:34.1px"><span class="ft0">3.3 Traditional Methodology ... 14 </span></div><div style="position:absolute;top:182.225px;left:47.975px"><span class="ft5"><i>3.3.1 Traditional VS Agile</i> ... 14 </span></div><div style="position:absolute;top:207.2px;left:34.1px"><span class="ft0">3.4 Agile Development and Quality Assurance ... 15 </span></div><div style="position:absolute;top:231.25px;left:47.975px"><span class="ft5"><i>3.4.1 Agility</i> ... 15 </span></div><div style="position:absolute;top:256.225px;left:47.975px"><span class="ft5"><i>3.4.2 Types of Agile Methodologies</i> ... 15 </span></div><div style="position:absolute;top:281.2px;left:47.975px"><span class="ft5"><i>3.4.2.1 Extreme Programming (XP)</i> ... 15 </span></div><div style="position:absolute;top:306.175px;left:47.975px"><span class="ft5"><i>3.4.2.2 Scrum</i> ... 15 </span></div><div style="position:absolute;top:331.15px;left:47.975px"><span class="ft5"><i>3.4.2.3 Crystal Methodology</i> ... 16 </span></div><div style="position:absolute;top:355.2px;left:47.975px"><span class="ft5"><i>3.4.2.4Kanban Methodology</i> ... 16 </span></div><div style="position:absolute;top:380.175px;left:47.975px"><span class="ft5"><i>3.4.2.5Feature Driven Development (FDD) Methodology</i> ... 16 </span></div><div style="position:absolute;top:405.15px;left:47.975px"><span class="ft5"><i>3.4.2.6 DSDM Methodology</i> ... 16 </span></div><div style="position:absolute;top:430.125px;left:34.1px"><span class="ft0">3.5  Methods ... 17 </span></div><div style="position:absolute;top:454.175px;left:47.975px"><span class="ft5"><i>3.5.1 Qualitative Approach</i> ... 17 </span></div><div style="position:absolute;top:479.15px;left:47.975px"><span class="ft5"><i>3.5.2  Informal Interviews</i> ... 17 </span></div><div style="position:absolute;top:504.125px;left:21.15px"><span class="ft0">Chapter4.  Results and Findings ... 18 </span></div><div style="position:absolute;top:529.1px;left:34.1px"><span class="ft0">4.1    Trends in Agile Methodologies ... 18 </span></div><div style="position:absolute;top:554.075px;left:34.1px"><span class="ft0">4.2    New Development Approach in Organizations ... 21 </span></div><div style="position:absolute;top:578.125px;left:34.1px"><span class="ft0">4.3    Spreading Trend ... 21 </span></div><div style="position:absolute;top:603.1px;left:34.1px"><span class="ft0">4.4    The Bright Side of Agile Development ... 22 </span></div><div style="position:absolute;top:628.075px;left:34.1px"><span class="ft0">4.5    Challenges Adopting Agile Development ... 22 </span></div><div style="position:absolute;top:653.05px;left:34.1px"><span class="ft0">4.6    Improvement of QA in Different Agile ... 22 </span></div><div style="position:absolute;top:677.1px;left:21.15px"><span class="ft0">Chapter5. Conclusion and Future Work ... 24 </span></div><div style="position:absolute;top:702.075px;left:34.1px"><span class="ft0">5.1 Conclusion ... 24 </span></div><div style="position:absolute;top:727.05px;left:34.1px"><span class="ft0">5.2 Future Work ... 24 </span></div><div style="position:absolute;top:752.025px;left:21.15px"><span class="ft0">References ... 25 </span></div><div style="position:absolute;top:776.075px;left:21.15px"><span class="ft0"> </span></div><div style="position:absolute;top:811.225px;left:294.025px"><span class="ft1"><b> </b></span></div><div style="position:absolute;top:844.525px;left:294.025px"><span class="ft1"><b> </b></span></div><div style="position:absolute;top:878.75px;left:294.025px"><span class="ft1"><b> </b></span></div></div><hr style="display: block; border-bottom: 8px solid #f0f0f0; width: 610px; margin-left: -18px; height: 8px; border-top: none;"/><div style="position: relative; width: 564.25px; height: 1081.325px;"><style type="text/css"><!----></style><div style="position:absolute;top:930.55px;left:264.425px"><span class="ft0">viii </span></div><div style="position:absolute;top:947.2px;left:-1.049999999999997px"><span class="ft0"> </span></div><div style="position:absolute;top:132.275px;left:226.5px"><span class="ft1"><b>List of Figures </b></span></div><div style="position:absolute;top:165.575px;left:-1.049999999999997px"><span class="ft2">Figure 2.1 </span></div><div style="position:absolute;top:165.575px;left:86.825px"><span class="ft2">Defect Management Approach ...5 </span></div><div style="position:absolute;top:197.025px;left:-1.049999999999997px"><span class="ft2">Figure 2.2  </span></div><div style="position:absolute;top:197.025px;left:86.825px"><span class="ft2">Software Quality Attributes ...6 </span></div><div style="position:absolute;top:228.475px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:259.925px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:291.375px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:322.825px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:354.275px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:385.725px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:416.25px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:447.7px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:479.15px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:510.6px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:542.05px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:573.5px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:604.95px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:636.4px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:667.85px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:699.3px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:735.375px;left:271.825px"><span class="ft1"><b> </b></span></div><div style="position:absolute;top:768.675px;left:271.825px"><span class="ft1"><b> </b></span></div><div style="position:absolute;top:802.9px;left:271.825px"><span class="ft1"><b> </b></span></div><div style="position:absolute;top:836.2px;left:271.825px"><span class="ft1"><b> </b></span></div><div style="position:absolute;top:870.425px;left:271.825px"><span class="ft1"><b> </b></span></div></div><hr style="display: block; border-bottom: 8px solid #f0f0f0; width: 610px; margin-left: -18px; height: 8px; border-top: none;"/><div style="position: relative; width: 564.25px; height: 1081.325px;"><style type="text/css"><!----></style><div style="position:absolute;top:930.55px;left:289.4px"><span class="ft0">ix </span></div><div style="position:absolute;top:947.2px;left:21.15px"><span class="ft0"> </span></div><div style="position:absolute;top:132.275px;left:251.475px"><span class="ft1"><b>List of Tables </b></span></div><div style="position:absolute;top:166.5px;left:21.15px"><span class="ft1"><b> </b></span></div><div style="position:absolute;top:197.025px;left:21.15px"><span class="ft2">Table 3.1  </span></div><div style="position:absolute;top:197.025px;left:108.1px"><span class="ft2">Definition of Quality and Agility...10 </span></div><div style="position:absolute;top:228.475px;left:21.15px"><span class="ft2">Table 3.2  </span></div><div style="position:absolute;top:228.475px;left:108.1px"><span class="ft2">QA in Agile...13 </span></div><div style="position:absolute;top:259.925px;left:21.15px"><span class="ft2">Table 4.1  </span></div><div style="position:absolute;top:259.925px;left:108.1px"><span class="ft2">Scrum ...18 </span></div><div style="position:absolute;top:291.375px;left:21.15px"><span class="ft2">Table 4.2 </span></div><div style="position:absolute;top:291.375px;left:108.1px"><span class="ft2">Crystal...19 </span></div><div style="position:absolute;top:322.825px;left:21.15px"><span class="ft2">Table 4.3 </span></div><div style="position:absolute;top:322.825px;left:108.1px"><span class="ft2">Extreme Programming (XP)...20 </span></div><div style="position:absolute;top:354.275px;left:21.15px"><span class="ft2">Table 4.4 </span></div><div style="position:absolute;top:354.275px;left:108.1px"><span class="ft2">Kanban...21 </span></div><div style="position:absolute;top:385.725px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:417.175px;left:21.15px"><span class="ft1"><b> </b></span></div><div style="position:absolute;top:447.7px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:479.15px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:510.6px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:542.05px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:573.5px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:604.95px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:636.4px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:667.85px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:699.3px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:729.825px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:761.275px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:792.725px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:824.175px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:855.625px;left:21.15px"><span class="ft2"> </span></div><div style="position:absolute;top:887.075px;left:21.15px"><span class="ft1"><b> </b></span></div></div><hr style="display: block; border-bottom: 8px solid #f0f0f0; width: 610px; margin-left: -18px; height: 8px; border-top: none;"/><div style="position: relative; width: 564.25px; height: 1081.325px;"><style type="text/css"><!----></style><div style="position:absolute;top:930.55px;left:269.05px"><span class="ft0">x </span></div><div style="position:absolute;top:947.2px;left:-1.049999999999997px"><span class="ft0"> </span></div><div style="position:absolute;top:132.275px;left:206.15px"><span class="ft1"><b>List of Abbreviations </b></span></div><div style="position:absolute;top:165.575px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:197.025px;left:53.525px"><span class="ft2">QA    </span></div><div style="position:absolute;top:197.025px;left:130.3px"><span class="ft2">Quality Assurance </span></div><div style="position:absolute;top:228.475px;left:53.525px"><span class="ft2">SQA  </span></div><div style="position:absolute;top:228.475px;left:130.3px"><span class="ft2">Software Quality Assurance </span></div><div style="position:absolute;top:259.925px;left:53.525px"><span class="ft2">SPI    </span></div><div style="position:absolute;top:259.925px;left:130.3px"><span class="ft2">Software Process Improvement </span></div><div style="position:absolute;top:291.375px;left:53.525px"><span class="ft2">SDLC  </span></div><div style="position:absolute;top:291.375px;left:130.3px"><span class="ft2">Software Development Life Cycle </span></div><div style="position:absolute;top:322.825px;left:53.525px"><span class="ft2">IEEE  </span></div><div style="position:absolute;top:322.825px;left:130.3px"><span class="ft2">Institute of Electrical and Electronics Engineers </span></div><div style="position:absolute;top:354.275px;left:53.525px"><span class="ft2">KIS    </span></div><div style="position:absolute;top:354.275px;left:130.3px"><span class="ft2">Keep It Simple </span></div><div style="position:absolute;top:385.725px;left:53.525px"><span class="ft2">OOP  </span></div><div style="position:absolute;top:385.725px;left:130.3px"><span class="ft2">Object Oriented Programming </span></div><div style="position:absolute;top:416.25px;left:53.525px"><span class="ft2">JAD   </span></div><div style="position:absolute;top:416.25px;left:130.3px"><span class="ft2">Joint Application Development </span></div><div style="position:absolute;top:447.7px;left:53.525px"><span class="ft2">RUP   </span></div><div style="position:absolute;top:447.7px;left:130.3px"><span class="ft2">Rational unified Process </span></div><div style="position:absolute;top:479.15px;left:53.525px"><span class="ft2">XP    </span></div><div style="position:absolute;top:479.15px;left:130.3px"><span class="ft2">Extreme Programming  </span></div><div style="position:absolute;top:510.6px;left:53.525px"><span class="ft2">YAGNI  </span></div><div style="position:absolute;top:510.6px;left:130.3px"><span class="ft2">You Are not Gonna Need It </span></div><div style="position:absolute;top:542.05px;left:53.525px"><span class="ft2">FDD  </span></div><div style="position:absolute;top:542.05px;left:130.3px"><span class="ft2">Feature Driven Development </span></div><div style="position:absolute;top:573.5px;left:53.525px"><span class="ft2">DSDM  </span></div><div style="position:absolute;top:573.5px;left:130.3px"><span class="ft2">Dynamic System Development Method </span></div><div style="position:absolute;top:604.95px;left:53.525px"><span class="ft2">RAD  </span></div><div style="position:absolute;top:604.95px;left:130.3px"><span class="ft2">Rapid Application Development  </span></div><div style="position:absolute;top:636.4px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:667.85px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:699.3px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:729.825px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:761.275px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:792.725px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:824.175px;left:-1.049999999999997px"><span class="ft2"> </span></div><div style="position:absolute;top:855.625px;left:-1.049999999999997px"><span class="ft2"> </span></div></div><hr style="display: block; border-bottom: 8px solid #f0f0f0; width: 610px; margin-left: -18px; height: 8px; border-top: none;"/><div style="position: relative; width: 564.25px; height: 1081.325px;"><style type="text/css"><!-- .ft6 { font-size: 12.95px; font-family: Arial; }  .ft7 { font-size: 12.95px; font-family: Arial; } --></style><div style="position:absolute;top:974.025px;left:279.225px"><span class="ft0">1 </span></div><div style="position:absolute;top:990.675px;left:282.925px"><span class="ft0"> </span></div><div style="position:absolute;top:95.275px;left:274.6px"><span class="ft6"><b>Chapter1 </b></span></div><div style="position:absolute;top:130.425px;left:264.425px"><span class="ft6"><b>Introduction </b></span></div><div style="position:absolute;top:164.65px;left:1.725000000000009px"><span class="ft6"><b>1.1 Study Overview </b></span></div><div style="position:absolute;top:184.075px;left:1.725000000000009px"><span class="ft0"> </span></div><div style="position:absolute;top:214.6px;left:1.725000000000009px"><span class="ft7">When we think about the quality of software, our concern is around the assessment of the </span></div><div style="position:absolute;top:240.5px;left:1.725000000000009px"><span class="ft7">software based on certain qualities. The frame work for software development can be </span></div><div style="position:absolute;top:266.4px;left:1.725000000000009px"><span class="ft7">adaptable only if it leads to the quality product with high assurance and the concept of how </span></div><div style="position:absolute;top:292.3px;left:1.725000000000009px"><span class="ft7">secure quality framework it is [1].  The response of the Quality Assurance is sometimes </span></div><div style="position:absolute;top:318.2px;left:1.725000000000009px"><span class="ft7">called as quality framework or it is gradually known as a quality administration framework. It </span></div><div style="position:absolute;top:344.1px;left:1.725000000000009px"><span class="ft7">includes administration structure, liabilities, exercises, capabilities and effects of software </span></div><div style="position:absolute;top:370px;left:1.725000000000009px"><span class="ft7">that guarantee the software production by venture which fulfils the desired quality attributes </span></div><div style="position:absolute;top:394.975px;left:1.725000000000009px"><span class="ft7">requirements on which both the client and development organization get agree on it. This </span></div><div style="position:absolute;top:420.875px;left:1.725000000000009px"><span class="ft7">implies that a quality framework joins exercises such as examining, analysis, improvement, </span></div><div style="position:absolute;top:446.775px;left:1.725000000000009px"><span class="ft7">invalidation of effects, giving inputs, development benchmarks strategies and rules to be </span></div><div style="position:absolute;top:472.675px;left:1.725000000000009px"><span class="ft7">followed [2]. The characterized outside quality is based on how software performs in real </span></div><div style="position:absolute;top:498.575px;left:1.725000000000009px"><span class="ft7">time situation at operational mode and how valuable it is for its clients, while he inner quality </span></div><div style="position:absolute;top:524.475px;left:1.725000000000009px"><span class="ft7">on the other hand centers on the fundamental perspectives that are subordinate on the quality </span></div><div style="position:absolute;top:550.375px;left:1.725000000000009px"><span class="ft7">of the code composed. The client centers more  on  how  the computer software  works at </span></div><div style="position:absolute;top:576.275px;left:1.725000000000009px"><span class="ft7">the outside level, but the quality at outside level can be kept up as it were in  case the  coder </span></div><div style="position:absolute;top:601.25px;left:1.725000000000009px"><span class="ft7">has composed a significant great quality code as </span></div><div style="position:absolute;top:601.25px;left:321.775px"><span class="ft7">appeared </span></div><div style="position:absolute;top:601.25px;left:379.125px"><span class="ft7">in </span></div><div style="position:absolute;top:601.25px;left:394.85px"><span class="ft7">stream chart of inner quality </span></div><div style="position:absolute;top:627.15px;left:1.725000000000009px"><span class="ft7">and outside quality components [1]. It is not only reasonable for software developers but also </span></div><div style="position:absolute;top:653.05px;left:1.725000000000009px"><span class="ft7">for development teams leaders, project directors, item analysts, improvement supervisors, QA </span></div><div style="position:absolute;top:678.95px;left:1.725000000000009px"><span class="ft7">supervisors, QA engineers, specialized scholars and anyone that are a part of software </span></div><div style="position:absolute;top:704.85px;left:1.725000000000009px"><span class="ft7">development. This paper will center on how team work can be improve to make all well </span></div><div style="position:absolute;top:730.75px;left:1.725000000000009px"><span class="ft7">to arrange, construct,  and provide computer  software with high Quality Assurance (QA). I </span></div><div style="position:absolute;top:756.65px;left:1.725000000000009px"><span class="ft7">will discuss the quality factors of each agile methods that are depend in terms of quality in </span></div><div style="position:absolute;top:782.55px;left:1.725000000000009px"><span class="ft7">each agile, will also suggest some practices that can improve the overall life cycle of software </span></div><div style="position:absolute;top:808.45px;left:1.725000000000009px"><span class="ft7">development in agile to produce high quality assured product. Hopefully this study will make </span></div><div style="position:absolute;top:833.425px;left:1.725000000000009px"><span class="ft7">trends capable in terms of the feasibility of team association in software advancement using </span></div><div style="position:absolute;top:859.325px;left:1.725000000000009px"><span class="ft7">agile methodology and will reach to the objective of client fulfilment [3]. </span></div><div style="position:absolute;top:898.175px;left:1.725000000000009px"><span class="ft7"> </span></div><div style="position:absolute;top:936.1px;left:1.725000000000009px"><span class="ft7"> </span></div></div><hr style="display: block; border-bottom: 8px solid #f0f0f0; width: 610px; margin-left: -18px; height: 8px; border-top: none;"/><div style="position: relative; width: 564.25px; height: 1081.325px;"><style type="text/css"><!----></style><div style="position:absolute;top:974.025px;left:279.225px"><span class="ft0">2 </span></div><div style="position:absolute;top:990.675px;left:282.925px"><span class="ft0"> </span></div><div style="position:absolute;top:90.65px;left:1.725000000000009px"><span class="ft6"><b>1.2 Statement of the problem </b></span></div><div style="position:absolute;top:110.075px;left:23.925px"><span class="ft6"><b> </b></span></div><div style="position:absolute;top:135.975px;left:1.725000000000009px"><span class="ft7">I will like to quote that "The Agile methodology significantly modifies the Quality Assurance </span></div><div style="position:absolute;top:161.875px;left:1.725000000000009px"><span class="ft7">picture by affecting liability of the software for the Client and development team. Needs </span></div><div style="position:absolute;top:186.85px;left:1.725000000000009px"><span class="ft7">more work to be done in terms of Quality Assurance in Agile Methodologies [14]. In study I </span></div><div style="position:absolute;top:212.75px;left:1.725000000000009px"><span class="ft7">am trying to enquire my work about the following questions:- </span></div><div style="position:absolute;top:251.6px;left:5.425000000000011px"><span class="ft7">i.  What is the impact of Agile in the software development life cycle?  </span></div><div style="position:absolute;top:277.5px;left:0.800000000000011px"><span class="ft7">ii.  Identify the key independent and dependent quality factors of each Agile method that can </span></div><div style="position:absolute;top:303.4px;left:23.925px"><span class="ft7">leads software failure or success during the SDLC in terms of Quality, time and price? </span></div><div style="position:absolute;top:328.375px;left:-2.899999999999991px"><span class="ft7">iii.  How the current organizations work with agile methods for software development?  </span></div><div style="position:absolute;top:354.275px;left:-2.899999999999991px"><span class="ft7">iv.  What are the basic challenges faces by organization during projects while adopting agile </span></div><div style="position:absolute;top:380.175px;left:23.925px"><span class="ft7">methods? </span></div><div style="position:absolute;top:419.025px;left:1.725000000000009px"><span class="ft6"><b>1.3 Objectives of the study </b></span></div><div style="position:absolute;top:438.45px;left:1.725000000000009px"><span class="ft7"> </span></div><div style="position:absolute;top:476.375px;left:1.725000000000009px"><span class="ft7">In spite of the fact that, there are several claims  that Agile development is giving us  higher </span></div><div style="position:absolute;top:502.275px;left:1.725000000000009px"><span class="ft7">quality software. But comparing the studious material with responses of practitioners on </span></div><div style="position:absolute;top:528.175px;left:1.725000000000009px"><span class="ft7">software development using agile methods in term of software Quality Assurance, the agile </span></div><div style="position:absolute;top:554.075px;left:1.725000000000009px"><span class="ft7">methods are depending on the software value and organizational structure. Some interviews </span></div><div style="position:absolute;top:579.975px;left:1.725000000000009px"><span class="ft7">with peers and practically involved people in different organizations experiencing agile </span></div><div style="position:absolute;top:605.875px;left:1.725000000000009px"><span class="ft7">methods for software development will assessed to get it, how organizations are practicing </span></div><div style="position:absolute;top:631.775px;left:1.725000000000009px"><span class="ft7">SQA in agile methods to improve the product quality in terms of delivery, quality and client </span></div><div style="position:absolute;top:656.75px;left:1.725000000000009px"><span class="ft7">requirements. Some of the suggestions will be put forward to organizations that could </span></div><div style="position:absolute;top:682.65px;left:1.725000000000009px"><span class="ft7">improve the agile methods and give maximum assurance of quality of any software product </span></div><div style="position:absolute;top:708.55px;left:1.725000000000009px"><span class="ft7">during the development stage. Hope my suggestion work will offer assistance to Agile </span></div><div style="position:absolute;top:734.45px;left:1.725000000000009px"><span class="ft7">exercises for the development team in current field.  In case of how the under process work is </span></div><div style="position:absolute;top:760.35px;left:1.725000000000009px"><span class="ft7">done without any break in any step and such agile methods can be profitable in respect to </span></div><div style="position:absolute;top:786.25px;left:1.725000000000009px"><span class="ft7">quality and product output. </span></div><div style="position:absolute;top:824.175px;left:1.725000000000009px"><span class="ft6"><b>1.4 Scope and Limitation </b></span></div><div style="position:absolute;top:844.525px;left:1.725000000000009px"><span class="ft0"> </span></div><div style="position:absolute;top:875.05px;left:1.725000000000009px"><span class="ft7">The scope limitation must be set in terms of achieving the high quality product that assure the </span></div><div style="position:absolute;top:900.95px;left:1.725000000000009px"><span class="ft7">software requirements. Some of the scope limitations may be: </span></div></div></div>
+
+
+			<div class="page-numbers">
+				
+					Excerpt out of 33 pages
+				
+				&nbsp;-&nbsp;<a data-scroll-top href="javascript:void(0);">scroll top</a>
+			</div>
+		</section>
+	
+
+	<section class="buybox bottom">
+		
+
+	
+		<form class="buybox" method="post" action="https://www.grin.com/shoppingcart">
+			<input type="hidden" name="method" value="add"/>
+			<input type="hidden" name="source_type" value="document"/>
+			<input type="hidden" name="reference_id" value="432082"/>
+			<input type="hidden" name="test_group" value="B"/>
+			<input type="hidden" name="test_gang" value="WEST"/>
+			<input type="hidden" name="test_bunch" value="3"/>
+			<input type="hidden" name="test_brand" value="grin-https"/>
+			<input type="hidden" name="test_button_id" value="bottom"/>
+			<input type="hidden" name="partner_id" value="0"/>
+
+			<div class="products">
+				
+				
+
+				
+					
+						
+	
+
+	<label class="product">
+		<input class="product-radiobutton" type="radio" name="product" value="ebook" checked>
+		
+	<div class="line1">
+		eBook&nbsp;for only&nbsp;
+		<b class="price">
+			US$ 15.99
+		</b>
+	</div>
+	<div class="line2">
+			Download immediately. Incl. VAT
+	</div>
+		<div class="formatinfo">
+			<b>Format:</b> PDF
+			&nbsp;&ndash;&nbsp;for PC, Kindle, tablet, mobile
+		</div>
+
+	</label>
+
+						
+					
+					
+				
+
+				
+
+				
+					
+	
+		<hr class="products-separator">
+	
+
+	<label class="product">
+		<input class="product-radiobutton" type="radio" name="product" value="book" >
+		
+	<div class="line1">
+		Book for only&nbsp;
+		<b class="price">
+			US$ 19.50
+		</b>
+	</div>
+	<div class="line2">
+		
+			Shipping worldwide
+		
+	</div>
+
+	</label>
+
+					
+					
+				
+			</div>
+
+			
+				<div class="buybox-button">
+					<button type="submit" class="call-to-action">
+						<span class="button-text">Add to cart</span>
+						<span class="button-icon"></span>
+					</button>
+				</div>
+			
+		</form>
+
+	
+
+	</section>
+
+	
+
+	
+	
+	
+		
+	<section class="meta-details">
+	<h2 class="heading1 heading">Details</h2>
+		<dl>
+			
+				<dt class="title">Title</dt>
+				<dd class="title" itemprop="name">Quality Assurance in Agile Methodology</dd>
+			
+			
+			
+				<dt class="institution">College</dt>
+				<dd class="institution">
+					
+						<a href="https://www.grin.com/institution/2903">Shaheed Zulfikar Ali Bhutto Institute of Science &amp; Technology
+							
+								&nbsp;(Dubai Campus)
+							
+						</a>
+					
+				</dd>
+			
+			
+				<dt class="event">Course</dt>
+				<dd class="event" itemprop="about">Independent Study</dd>
+			
+			
+				<dt class="grade">Grade</dt>
+				<dd class="grade">3.5</dd>
+			
+			
+				<dt class="authors">Author</dt>
+				<dd class="authors" itemprop="author">  <span data-guid="document_author.437104"><a href="https://www.grin.com/user/1864578">Syed Hassan Shah (Author)</a></span></dd>
+			
+
+			
+				<dt class="year">Year</dt>
+				<dd class="year" itemprop="copyrightYear">2018</dd>
+			
+
+			
+				<dt class="page_count">Pages</dt>
+				<dd class="page_count" itemprop="numberOfPages">33</dd>
+			
+
+			<dt class="archive_no">Catalog Number</dt>
+			<dd class="archive_no">V432082</dd>
+
+			
+				<dt class="isbn_ebook">ISBN (eBook)</dt>
+				<dd class="isbn_ebook" itemprop="isbn">9783668746077</dd>
+			
+
+			
+				<dt class="isbn_book">ISBN (Book)</dt>
+				<dd class="isbn_book" itemprop="isbn">9783668746084</dd>
+			
+
+			
+				<dt class="file_size">File size</dt>
+				<dd class="file_size">685 KB</dd>
+			
+
+			
+				<dt class="language">Language</dt>
+				<dd class="language" itemprop="inLanguage">English</dd>
+			
+
+			
+
+			
+			
+
+
+			
+				<dt class="tags">Tags</dt>
+				<dd class="tags">
+					
+						<a href="https://www.grin.com/tag/quality" class="tag-value" data-tag-value="">quality</a>
+					
+						<a href="https://www.grin.com/tag/assurance" class="tag-value" data-tag-value="">assurance</a>
+					
+						<a href="https://www.grin.com/tag/agile" class="tag-value" data-tag-value="">agile</a>
+					
+						<a href="https://www.grin.com/tag/methodology" class="tag-value" data-tag-value="">methodology</a>
+					
+				</dd>
+			
+
+			
+				<dt class="hidden price">
+					Price (Book)
+				</dt>
+				<dd class="hidden price" itemscope itemtype="http://schema.org/Offer">
+					<span itemprop="price">US$ 19.50</span>
+					<meta itemprop="priceCurrency" content="EUR" /> 
+				</dd>
+			
+
+			
+				<dt class="hidden price">
+					Price (eBook)
+				</dt>
+				<dd class="hidden price" itemscope itemtype="http://schema.org/Offer">
+					<span itemprop="price">US$ 15.99</span>
+					<meta itemprop="priceCurrency" content="EUR" /> 
+				</dd>
+			
+		</dl>
+	</section>
+
+		
+	 
+	<section class="page-document-quotepaper fullWidthDl">
+		<dl>
+			<dt>Quote paper</dt>
+			<dd>  <span data-guid="document_author.437104"><a href="https://www.grin.com/user/1864578">Syed Hassan Shah (Author)</a></span>,&#32;2018,&#32;Quality Assurance in Agile Methodology,&#32;Munich,&#32;GRIN Verlag, https://www.grin.com/document/432082</dd>
+		</dl>
+	</section>
+
+
+	
+	
+	<section class="sidebar-related_objects_by_purchase">
+		<h4 class="heading2 heading">Similar texts</h4>
+		
+	
+	
+	
+	<div data-widget="Carousel" class="carousel grid-carousel matrix-1x2 visibility-listener">
+		<div class="carousel-pane">
+			<ul data-page-item-container class="carousel-item-container">
+				
+					<li data-carousel-list-item class="carousel-col on-left-edge ">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.337556" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/337556"><img src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/337556_thumb.jpg" alt="Title: Quality Assurance in Dental Radiology" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/337556_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/337556">Quality Assurance in Dental Radiology</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/497" class="color-gray">Medicine - Radiology, Nuclear Medicine</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Textbook,&#160;
+				
+				
+					18&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col  on-right-edge">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.309528" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/309528"><img src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/309528_thumb.jpg" alt="Title: Increasing Software Development Efficiency. Methodologies and Approaches" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/309528_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/309528">Increasing Software Development Efficiency. Methodologies and Appro...</a>
+				
+			</div>
+		
+		
+			<div class="heading2">
+				Prototyping, Agile, Structu...
+			</div>
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/97" class="color-gray">Computer Science - Programming</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Research Paper (postgraduate),&#160;
+				
+				
+					21&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col on-left-edge ">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.286438" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/286438"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/286438_thumb.jpg" alt="Title: Challenges of Implementation of Agile In Distributed Environment" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/286438_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/286438">Challenges of Implementation of Agile In Distributed Environment</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/98" class="color-gray">Computer Science - Software</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Scientific Essay,&#160;
+				
+				
+					4&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col  on-right-edge">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.312311" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/312311"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/312311_thumb.jpg" alt="Title: Agile Software Development. Comparison and Evaluation of Existing Tools" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/312311_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/312311">Agile Software Development. Comparison and Evaluation of Existing T...</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/98" class="color-gray">Computer Science - Software</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Research Paper (postgraduate),&#160;
+				
+				
+					16&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col on-left-edge ">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.355110" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/355110"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/355110_thumb.jpg" alt="Title: Distributed Agile Outsourcing. An Overview of Methods and Success Factors" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/355110_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/355110">Distributed Agile Outsourcing. An Overview of Methods and Success F...</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/221" class="color-gray">Computer Science - Commercial Information Technology</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Term Paper (Advanced seminar),&#160;
+				
+				
+					21&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col  on-right-edge">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.373815" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/373815"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/373815_thumb.jpg" alt="Title: Leadership Development in an agile environment" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/373815_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/373815">Leadership Development in an agile environment</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/219" class="color-gray">Business economics - Business Management, Corporate Governance</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Term Paper,&#160;
+				
+				
+					16&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col on-left-edge ">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.377835" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/377835"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/377835_thumb.jpg" alt="Title: A Critical Analysis of the Usage of Selected Agile Project Management Methods in Change Management" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/377835_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/377835">A Critical Analysis of the Usage of Selected Agile Project Manageme...</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/219" class="color-gray">Business economics - Business Management, Corporate Governance</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Master's Thesis,&#160;
+				
+				
+					96&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col  on-right-edge">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.345455" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/345455"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/345455_thumb.jpg" alt="Title: Global and Capable Quality Management" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/345455_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/345455">Global and Capable Quality Management</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/219" class="color-gray">Business economics - Business Management, Corporate Governance</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Term Paper,&#160;
+				
+				
+					52&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col on-left-edge ">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.271446" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/271446"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/271446_thumb.jpg" alt="Title: Privatization of Education Services Provision and Implications for Quality Education in Tanzania" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/271446_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/271446">Privatization of Education Services Provision and Implications for ...</a>
+				
+			</div>
+		
+		
+			<div class="heading2">
+				Are efficient Quality Assur...
+			</div>
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/32" class="color-gray">Pedagogy - School System, Educational and School Politics</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Essay,&#160;
+				
+				
+					18&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col  on-right-edge">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.299917" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/299917"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/299917_thumb.jpg" alt="Title: Test methods for the quality assurance during the production of PEM fuel cells" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/299917_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/299917">Test methods for the quality assurance during the production of PEM...</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/52" class="color-gray">Engineering - Mechanical Engineering</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Bachelor Thesis,&#160;
+				
+				
+					63&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col on-left-edge ">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.230613" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/230613"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/230613_thumb.jpg" alt="Title: Research Methodologies at the Dissertation Level" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/230613_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/230613">Research Methodologies at the Dissertation Level</a>
+				
+			</div>
+		
+		
+			<div class="heading2">
+				Research Methodologies at t...
+			</div>
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/61" class="color-gray">Communications - Methods and Research Logic</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Scientific Essay,&#160;
+				
+				
+					23&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col  on-right-edge">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.232675" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/232675"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/232675_thumb.jpg" alt="Title: Methodology for the Numerical Characterization of a Radial Turbine under Steady and Pulsating Flow" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/232675_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/232675">Methodology for the Numerical Characterization of a Radial Turbine ...</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/52" class="color-gray">Engineering - Mechanical Engineering</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Doctoral Thesis / Dissertation,&#160;
+				
+				
+					243&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col on-left-edge ">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.282608" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/282608"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/282608_thumb.jpg" alt="Title: Implementing a Best Practice Risk Assessment Methodology" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/282608_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/282608">Implementing a Best Practice Risk Assessment Methodology</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/93" class="color-gray">Information Management</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Textbook,&#160;
+				
+				
+					37&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col  on-right-edge">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.295947" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/295947"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/295947_thumb.jpg" alt="Title: Methodological Individualism and Holism. Two Views, One Purpose" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/295947_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/295947">Methodological Individualism and Holism. Two Views, One Purpose</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/297" class="color-gray">Philosophy - Theoretical (Realisation, Science, Logic, Language)</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Master's Thesis,&#160;
+				
+				
+					45&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col on-left-edge ">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.306758" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/306758"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/306758_thumb.jpg" alt="Title: Research Methodology. The Origin and Scope of Thick Ethnography" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/306758_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/306758">Research Methodology. The Origin and Scope of Thick Ethnography</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/140" class="color-gray">Ethnology / Cultural Anthropology</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Research Paper (undergraduate),&#160;
+				
+				
+					29&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col  on-right-edge">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.41152" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/41152"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/41152_thumb.jpg" alt="Title: Research Quality Assurance" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/41152_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/41152">Research Quality Assurance</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/508" class="color-gray">Medicine - Hospital Environment, Clinical Medicine</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Essay,&#160;
+				
+				
+					11&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col on-left-edge ">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.316701" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/316701"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/316701_thumb.jpg" alt="Title: Methodological issues in exploring students’
+ideas about elementary astronomy" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/316701_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/316701">Methodological issues in exploring students’
+ideas about elementary...</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/224" class="color-gray">Pedagogy - Common Didactics, Educational Objectives, Methods</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Scientific Essay,&#160;
+				
+				
+					22&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col  on-right-edge">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.41154" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/41154"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/41154_thumb.jpg" alt="Title: Global Regulations and Inspections - Research Quality Assurance" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/41154_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/41154">Global Regulations and Inspections - Research Quality Assurance</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/506" class="color-gray">Medicine - Other</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Essay,&#160;
+				
+				
+					10&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col on-left-edge ">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.41151" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/41151"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/41151_thumb.jpg" alt="Title: Principles and Practices of Research Quality Assurance - Ethics" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/41151_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/41151">Principles and Practices of Research Quality Assurance - Ethics</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/488" class="color-gray">Medicine - General</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Essay,&#160;
+				
+				
+					11&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+					<li data-carousel-list-item class="carousel-col  on-right-edge">
+						
+	<ul class="minilist">
+		
+			
+	<li class="minilist-item document" data-guid="document.343195" data-clipable>
+		
+			
+	
+	
+	
+	
+
+	<div class="picturebox">
+		<a href="https://www.grin.com/document/343195"><img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/images/cover/brand/e-book/1/343195_thumb.jpg" alt="Title: Construction of a master data management strategy. Methodologies and tools" onerror="var old_src='https://cdn.openpublishing.com/images/cover/brand/e-book/1/343195_thumb.jpg'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-document.png'"; class="picture-thumb"/></a>
+	</div>
+	<div class="meta">
+		
+			<div class="heading1">
+				
+					<a href="https://www.grin.com/document/343195">Construction of a master data management strategy. Methodologies an...</a>
+				
+			</div>
+		
+		
+		
+			<p class="catalog">
+				<a href="https://www.grin.com/en/catalog/subject/221" class="color-gray">Computer Science - Commercial Information Technology</a>
+			</p>
+		
+		
+			<p class="category">
+				
+					Seminar Paper,&#160;
+				
+				
+					21&#160;Pages
+				
+			</p>
+		
+		
+			<p class="price">
+				
+			</p>
+		
+
+		
+
+		
+
+	</div>
+
+		
+	</li>
+
+		
+	</ul>
+
+					</li>
+				
+			</ul>
+		</div>
+		
+			<div class="carousel-controls">
+				<div data-slider-left class="slider left"></div>
+				<div data-page-indicator class="page-indicator">
+					
+						
+							<span data-page-marker-active class="marker">&#160;</span>
+						
+					
+						
+							<span class="marker">&#160;</span>
+						
+					
+						
+							<span class="marker">&#160;</span>
+						
+					
+						
+							<span class="marker">&#160;</span>
+						
+					
+						
+							<span class="marker">&#160;</span>
+						
+					
+						
+							<span class="marker">&#160;</span>
+						
+					
+						
+							<span class="marker">&#160;</span>
+						
+					
+						
+							<span class="marker">&#160;</span>
+						
+					
+						
+							<span class="marker">&#160;</span>
+						
+					
+						
+							<span class="marker">&#160;</span>
+						
+					
+				</div>
+				<div data-slider-right class="slider right"></div>
+				<div class="clear-all"></div>
+			</div>
+		
+	</div>
+
+	</section>
+
+	
+<section class="page-document-comment" id="comments">
+	<h2 class="heading2 heading">Comments</h2>
+		
+	
+	
+
+	
+		
+			
+	<form data-create-comment-form data-comment-form-id="create-comment-document-432082" class="create-comment" data-guid="document.432082" onsubmit="return false;">
+
+		<div class="picturebox">
+			<img src="https://cdn.openpublishing.com/images/brand/1/dummys/thumb-boy.png" onerror="var old_src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-boy.png'; this.src='https://cdn.openpublishing.com/images/brand/1/dummys/thumb-boy.png'"; class="unscaled-picture-thumb"/>
+		</div>
+		<div class="commentform">
+			<textarea data-widget="AutoResize" class="commentbox" name="text" data-resize-factor="1.8" rows="1" data-comment-input-id="create-comment-input-document-432082" placeholder="Please write a new comment" maxlength="65535"></textarea>
+
+			<div class="comment-button">
+				<button type="submit">
+					<span>Send</span>
+				</button>
+			</div>
+
+			<p class="info">Your comment is reviewed before being published</p>
+		</div>
+	</form>
+
+		
+	
+
+	<ul data-comments-container
+		class="comments-container comments"  data-editor-id="comments-document-432082"
+		data-guid="document.432082"
+		data-editor="Gtpl_Editor"
+		data-template="Widget.Comments.DynamicContainer"
+		data-template-namespaces="Widget.Comments"
+		data-fields="comments:basic"
+		data-no-redraw
+		data-skip-first-draw>
+		
+	
+		<li class="no-comments">
+			No comments yet.
+		</li>
+	
+
+
+	</ul>
+
+
+
+</section>
+
+
+	</section>
+
+	
+	
+
+
+	
+		
+	
+	
+		<div id="document-preview-popup" class="popup" data-foldable-container data-foldable-id="document-preview-popup" data-no-slide>
+			
+				<div class="popup-overlay" data-foldable-trigger data-foldable-id="document-preview-popup"></div>
+			
+			<div class="popup-content">
+				<span class="close-icon close" data-foldable-trigger data-foldable-id="document-preview-popup"></span>
+				
+	<ul data-widget="DelayedImageLoaderFrame" class="document-preview-popup-pngs">
+		<li class="cover-png">
+			<img src="https://cdn.openpublishing.com/grin-paper/432082_0.jpg" onerror="this.src='https://cdn.openpublishing.com/images/brand/1/dummys/big-document.png'" class="page-a4-png"/>
+		</li>
+		
+<li class="page-png">
+<a href="https://www.grin.com/en/upload"><img src="https://cdn.openpublishing.com/images/brand/1/preview_popup_advertising.jpg" class="page-a4-png" alt="https://cdn.openpublishing.com/images/brand/1/preview_popup_advertising.jpg" border="0"></a>
+</li>
+
+		
+			<li class="page-png">
+				<img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/grin-paper/432082_1.jpg" onerror="this.src='https://cdn.openpublishing.com/images/brand/1/dummys/big-document.png'" class="page-a4-png"/>
+			</li>
+			
+<li class="page-png">
+<center><a href="https://www.grin.com/en/upload">Upload your own papers! Earn money and win an iPhone X.</a></center> 
+</li>
+</li>
+
+		
+			<li class="page-png">
+				<img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/grin-paper/432082_2.jpg" onerror="this.src='https://cdn.openpublishing.com/images/brand/1/dummys/big-document.png'" class="page-a4-png"/>
+			</li>
+			
+<li class="page-png">
+<center><a href="https://www.grin.com/en/upload">Upload your own papers! Earn money and win an iPhone X.</a></center> 
+</li>
+</li>
+
+		
+			<li class="page-png">
+				<img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/grin-paper/432082_3.jpg" onerror="this.src='https://cdn.openpublishing.com/images/brand/1/dummys/big-document.png'" class="page-a4-png"/>
+			</li>
+			
+<li class="page-png">
+<center><a href="https://www.grin.com/en/upload">Upload your own papers! Earn money and win an iPhone X.</a></center> 
+</li>
+</li>
+
+		
+			<li class="page-png">
+				<img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/grin-paper/432082_4.jpg" onerror="this.src='https://cdn.openpublishing.com/images/brand/1/dummys/big-document.png'" class="page-a4-png"/>
+			</li>
+			
+<li class="page-png">
+<center><a href="https://www.grin.com/en/upload">Upload your own papers! Earn money and win an iPhone X.</a></center> 
+</li>
+</li>
+
+		
+			<li class="page-png">
+				<img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/grin-paper/432082_5.jpg" onerror="this.src='https://cdn.openpublishing.com/images/brand/1/dummys/big-document.png'" class="page-a4-png"/>
+			</li>
+			
+<li class="page-png">
+<center><a href="https://www.grin.com/en/upload">Upload your own papers! Earn money and win an iPhone X.</a></center> 
+</li>
+</li>
+
+		
+			<li class="page-png">
+				<img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/grin-paper/432082_6.jpg" onerror="this.src='https://cdn.openpublishing.com/images/brand/1/dummys/big-document.png'" class="page-a4-png"/>
+			</li>
+			
+<li class="page-png">
+<center><a href="https://www.grin.com/en/upload">Upload your own papers! Earn money and win an iPhone X.</a></center> 
+</li>
+</li>
+
+		
+			<li class="page-png">
+				<img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/grin-paper/432082_7.jpg" onerror="this.src='https://cdn.openpublishing.com/images/brand/1/dummys/big-document.png'" class="page-a4-png"/>
+			</li>
+			
+<li class="page-png">
+<center><a href="https://www.grin.com/en/upload">Upload your own papers! Earn money and win an iPhone X.</a></center> 
+</li>
+</li>
+
+		
+			<li class="page-png">
+				<img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/grin-paper/432082_8.jpg" onerror="this.src='https://cdn.openpublishing.com/images/brand/1/dummys/big-document.png'" class="page-a4-png"/>
+			</li>
+			
+<li class="page-png">
+<center><a href="https://www.grin.com/en/upload">Upload your own papers! Earn money and win an iPhone X.</a></center> 
+</li>
+</li>
+
+		
+			<li class="page-png">
+				<img src="https://cdn.openpublishing.com/images/commons/blank.gif" data-delayed-src="https://cdn.openpublishing.com/grin-paper/432082_9.jpg" onerror="this.src='https://cdn.openpublishing.com/images/brand/1/dummys/big-document.png'" class="page-a4-png"/>
+			</li>
+			
+<li class="page-png">
+<center><a href="https://www.grin.com/en/upload">Upload your own papers! Earn money and win an iPhone X.</a></center> 
+</li>
+</li>
+
+		
+	</ul>
+	<section class="document-preview-popup-info">
+		
+			Excerpt from&#160;
+			33&#160;
+			pages
+		
+	</section>
+
+			</div>
+		</div>
+	
+
+	
+
+			</div>
+			<div class="sidebar page-wrapper">
+				
+	
+	
+	
+	
+	
+
+	
+		
+		
+		
+	<div class="cbox box-23">
+		
+			
+			
+
+
+<div class="sidebar-heading"><a href="https://www.grin.com/en/upload?amb=iphone" style="text-decoration:none;">Upload Papers,<br>win an iPhone X</a></div>
+
+<div>Upload texts in 2018 and participate in our drawing to win an iPhone X worth EUR 1,149. <br><b>Each new text counts as one lot!</b><br><br>
+<center><a href="https://www.grin.com/en/upload?amb=iphone"><img src="https://cdn.openpublishing.com/images/cms/297/iphone-x.png" class="" alt="iphone-x.png">
+</a></center>
+</div>
+
+
+
+		
+	</div>
+
+	
+		
+		
+		
+	<section class="htmlblock-24">
+		
+			
+			
+<div id="sidebarAd" style="width:300px; height:250px; padding: 0px 5px; margin-bottom: 10px;"></div>
+
+		
+	</section>
+
+	
+		
+		
+		
+	<section class="sidebar-video cbox">
+		<div class="sidebar-heading">Publish now - it's free</div>
+		
+	
+	
+		<div data-foldable>
+			<span data-foldable-trigger class="popup-trigger">
+				
+		<span data-poi="CLICK_YOUTUBE_VIDEO_SIDEBAR_document">
+			<img src="https://cdn.openpublishing.com/images/brand/1/grin_yt_video.png" class="youtube-sidebar" alt="https://cdn.openpublishing.com/images/brand/1/grin_yt_video.png" border="0">
+		</span>
+		
+			</span>
+			<div class="popup hidden" data-foldable-container id="" data-no-slide>
+				<div class="popup-overlay" data-foldable-trigger></div>
+				<div class="popup-content ">
+					<span class="close-icon close" data-foldable-trigger></span>
+					
+			<div class="video cbox">
+				<h3>Publish now - it's free</h3>
+				<p>
+					<iframe width="565" height="348"
+						src="https://www.youtube.com/embed/Tc6QT7DDnG4?rel=0&amp;wmode=transparent&amp;controls=0&amp;showinfo=0"
+						frameborder="0" 
+						allowfullscreen="allowfullscreen">
+					</iframe>
+				</p>
+			</div>
+		
+				</div>
+			</div>
+		</div>
+	
+
+		
+	</section>
+
+	
+		
+		
+		
+	
+
+	
+		
+		
+		
+	
+
+	
+		
+		
+		
+	
+
+	
+		
+		
+		
+	<div class="cbox box-332">
+		
+			
+			
+
+
+<div class="sidebar-heading"><a href="https://www.grin.com/en/upload?amb=teasersidebar" style="text-decoration:none;">Publish your papers</a></div>
+<div style="font-size:11pt">Your term paper / thesis:<br/><br/>
+<ul style="list-style-type: padding-left: 0px;">
+<li style="margin-bottom: 5px">- Publication as eBook and book</li>
+<li style="margin-bottom: 5px">- High royalties for the sales</li>
+<li style="margin-bottom: 5px">- Completely free - with ISBN</li>
+<li style="margin-bottom: 5px">- It only takes five minutes!</li>
+<li style="margin-bottom: 5px">- Every paper finds readers</li>
+</ul>
+<br/>
+<a href="https://www.grin.com/en/upload?amb=teasersidebar"><img src="https://cdn.grin.com/images/cms/297/button-en.png"></a>
+</div>
+
+
+
+		
+	</div>
+
+	
+
+	
+
+
+			</div>
+			<div class="clear-all"></div>
+	</div>
+
+			
+	<div class="footer">
+		<div class="column">
+			<div class="footer-1st-element">General</div>
+			<ul>
+				<li><a href="http://www.grin.com/en/">Home</a></li>
+				<li><a href="https://www.grin.com/en/upload">Upload papers</a></li>
+				<li><a href="http://www.grin.com/en/catalog/">Subjects</a></li>
+				<li><a href="https://www.grin.com/new.html">Recommendations</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://www.grin.com/en/quality.html">Quality guidelines</a></li>
+			</ul>
+			<ul>
+				<li><a href="http://www.grin.com/en/about.html">About us</a></li>
+				<li><a href="http://www.grin.com/team-grin.html">Team</a></li>
+				<li><a href="http://www.grin.com/en/jobs.html">Jobs</a></li>
+				<li><a href="http://www.grin.com/press">Press</a></li>
+				<li><a href="http://www.grin.com/en/partners.html">Partners + Projects</a></li>
+				<li><a href="http://www.grin.com/en/privacy.html">Privacy</a></li>
+				<li><a href="http://www.grin.com/en/contact.html">Imprint</a></li>
+			</ul>
+		</div>
+		<div class="column">
+			<div class="footer-1st-element">Authors</div>
+			<ul>
+				<li><a href="http://www.grin.com/en/help/author">Becoming author</a></li>
+				<li><a href="http://www.grin.com/en/help/author#options">Your Options</a></li>
+				<li><a href="http://www.grin.com/en/help/author#channels">The channels</a></li>
+				<li><a href="http://www.grin.com/en/help/author#premium">Premium Services</a></li>
+				<li><a href="http://www.grin.com/en/help/author#profile">Author profile</a></li>
+				<li><a href="http://www.grin.com/en/help/author#formats">Types of texts + formats</a></li>
+				<li><a href="http://www.grin.com/en/help/author#royalties">Royalties</a></li>
+				<li><a href="http://www.grin.com/en/help/author#series">Services for publishers, universities, companies</a></li>
+			</ul>
+			<div class="footer-1st-element">Premium Services</div>
+		<ul>
+				<li><a href="http://www.grin.com/en/help/premium">Premium Cover</a></li>
+				<li><a href="http://www.grin.com/en/help/premium#ebook">EPUB/MOBI Conversion</a></li>
+				<li><a href="http://www.grin.com/en/help/premium#marketing">Marketing Packages</a></li>
+				<li><a href="http://www.grin.com/en/help/premium#translation">Translation</a></li>
+				<li><a href="http://www.grin.com/en/help/premium#layout">Premium Layout</a></li>
+				<li><a href="http://www.grin.com/en/help/premium#proofreading">Proofreading</a></li>
+			</ul>
+			<div class="footer-1st-element">FAQ</div>
+			<ul>
+				<li><a href="http://www.grin.com/en/help/faq#faqauthor">For Authors</a></li>
+				<li><a href="http://www.grin.com/en/help/faq#faqbuyer">For Buyers</a></li>
+				<li><a href="http://www.grin.com/en/help/faq#faqpartner">Affiliate Program</a></li>
+				<li><a href="http://www.grin.com/en/help/faq#faqlogin">My Author's Account</a></li>
+			</ul>
+
+		</div>
+		<div class="column">
+			<div class="footer-1st-element">Marketing</div>
+			<ul>
+				<li><a href="http://www.grin.com/en/help/marketing">Reach more readers</a></li>
+				<li><a href="http://www.grin.com/en/help/marketing#you">Become active yourself</a></li>
+				<li><a href="http://www.grin.com/en/help/marketing#affiliates">Affiliate Programs</a></li>
+				<li><a href="http://www.grin.com/en/help/marketing#partners">Become Ambassador</a></li>
+			</ul>
+			<div class="footer-1st-element">Dissertations</div>
+			<ul>
+				<li><a href="http://www.grin.com/en/help/dissertation#dissertation">Publish your dissertation for free</a></li>
+				<li><a href="http://www.grin.com/en/help/dissertation#premium">Premium Services</a></li>
+				<li><a href="http://www.grin.com/en/help/dissertation#copies">Order author's copies at a reduced price</a></li>
+			</ul>
+			<div class="footer-1st-element">Readers&#160;&&#160;Buyers</div>
+			<ul>
+				<li><a href="http://www.grin.com/en/help/buyers#buyers">Find knowledge</a></li>
+				<li><a href="http://www.grin.com/en/help/buyers#ebooks">eBooks</a></li>
+				<li><a href="http://www.grin.com/en/help/buyers#books">Books</a></li>
+				<li><a href="http://www.grin.com/en/help/buyers#payment">Buying + Payment</a></li>
+				<!--li><a href="http://www.grin.com/en/help/buyers#legal">Legal / Terms</a></li-->
+				<li><a href="http://www.grin.com/en/help/buyers#plagiarism">Copyright / Plagiarism</a></li>
+			</ul>
+		</div>
+		<div class="column">
+			<div class="footer-1st-element">Payment Methods</div>
+			<img src="https://cdn.openpublishing.com/images/brand/1/payment-white.png" class="" alt="https://cdn.openpublishing.com/images/brand/1/payment-white.png" border="0">
+			<div class="footer-1st-element">Copyright</div>
+			<ul>
+				<li>© GRIN Verlag / <br/>Open Publishing GmbH.</li>
+<li>All content copyright restricted. Copying and distribution prohibited.</li>
+<li><a href="mailto:info@grin.com">info@grin.com</a></li>
+<li><a href="https://www.grin.com/en/termsofservice.html">Terms</a></li>
+<li><a href="https://openpublishing.com" target="_blank">Open Publishing</a></li>
+			</ul>
+		</div>
+		<div class="column-big">
+			<div class="footer-1st-element">About GRIN</div>
+<p>
+GRIN Publishing, located in Munich, Germany, has specialized since its foundation in 1998 in the publication of academic ebooks and books. The publishing website GRIN.com offer students, graduates and university professors the ideal platform for the presentation of scientific papers, such as research projects, theses, dissertations, and academic essays to a wide audience.
+</p>
+<p>
+Free Publication of your term paper, essay, interpretation, bachelor's thesis, master's thesis, dissertation or textbook - <a href="https://www.grin.com/en/upload">upload now!</a>
+</p>
+
+			
+				<br>
+				<a href="https://m.grin.com/document/432082">Go to mobile version</a>
+			
+			<div class="social-buttons">
+				Follow GRIN on
+				<a href="https://plus.google.com/u/0/104119599352556600480/" target="_blank"><img src="https://cdn.openpublishing.com/images/brand/1/grin_gplus.png" class="" alt="https://cdn.openpublishing.com/images/brand/1/grin_gplus.png" border="0"></a>
+				<a href="http://www.facebook.com/grincom" target="_blank"><img src="https://cdn.openpublishing.com/images/brand/1/grin_fb.png" class="" alt="https://cdn.openpublishing.com/images/brand/1/grin_fb.png" border="0"></a>
+				<a href="http://www.twitter.com/grin_com" target="_blank"><img src="https://cdn.openpublishing.com/images/brand/1/grin_twitter.png" class="" alt="https://cdn.openpublishing.com/images/brand/1/grin_twitter.png" border="0"></a>
+			</div>
+		</div>
+		<div class="clear-all"></div>
+		<ul class="hidden schema-org_data" itemscope itemtype="http://schema.org/Organization">
+			<li class="companyName" itemprop="name">GRIN Verlag GmbH</li>
+			<li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<ul>
+					<li class="address" itemprop="streetAddress">Nymphenburger Str. 86</li>
+					<li class="zip" itemprop="postalCode">80636</li>
+					<li class="city" itemprop="addressLocality">Munich, Deutschland</li>
+				</ul>
+			</li>
+			<li class="phone" itemprop="telephone">+49 89-550559-0</li>
+			<li class="fax" itemprop="faxNumber">+49 89-550559-10</li>
+			<li class="email" itemprop="email">info@grin.com</li>
+			<li class="logo" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+			<img src="https://cdn.openpublishing.com/images/brand/1/grin-logo-de.png" class="" alt="https://cdn.openpublishing.com/images/brand/1/grin-logo-de.png" border="0" itemprop="contentURL">
+			</li>
+		</ul>
+	</div>
+
+		</div>
+
+		
+
+	
+		
+
+	<script>
+	
+	window.onload = function(){
+
+
+		function adBlockDetected() {
+			console.log("=================");
+			console.log("Adblocker enabled");
+			console.log("=================");
+
+			function getRandomIntInclusive(min, max) {
+				min = Math.ceil(min);
+				max = Math.floor(max);
+				return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+			};
+
+			var i = getRandomIntInclusive(1,5);
+
+			var dest = "https://www.grin.com/de/upload?amb=adblocker";
+
+			
+			var skyscraperAd_html = '<a href="' + dest + '"><img src="https://cdn.openpublishing.com/images/brand/1/adblocker_fallback/skyscraperAd/skyscraperAd_v' + i + '.png" class="" alt="https://cdn.openpublishing.com/images/brand/1/adblocker_fallback/skyscraperAd/skyscraperAd_v' + i + '.png" border="0"></a>';
+			var Site_superbanner_html = '<a href="' + dest + '"><img src="https://cdn.openpublishing.com/images/brand/1/adblocker_fallback/Site_superbanner/Site_superbanner_v' + i + '.png" class="" alt="https://cdn.openpublishing.com/images/brand/1/adblocker_fallback/Site_superbanner/Site_superbanner_v' + i + '.png" border="0"></a>';
+			var sidebarAd_html = '<a href="' + dest + '"><img src="https://cdn.openpublishing.com/images/brand/1/adblocker_fallback/sidebar/sidebar_v' + i + '.png" class="" alt="https://cdn.openpublishing.com/images/brand/1/adblocker_fallback/sidebar/sidebar_v' + i + '.png" border="0"></a>';
+			
+
+			$('#skyscraperAd').after('<div class="grin-banner skycraper" style="position: absolute; left: 1013px; top: 117px; z-index: 9;">' + skyscraperAd_html + '</div>');
+			$('#skyscraperAd').hide();
+			$('#Site_superbanner').after('<div class="grin-banner superbanner" style="height: 90px; width: 990px;">' + Site_superbanner_html + '</div>');
+			$('#Site_superbanner').hide();
+			$('#sidebarAd').after('<div class="grin-banner sidebar" style="float: left; width: 300px; height: 250px; padding: 0px 5px; margin-top: 0px; margin-bottom: 20px;">' + sidebarAd_html + '</div>');
+			$('.grin-banner.sidebar').parent().next('.cbox').css({'clear' : 'both'});
+			$('#sidebarAd').hide();
+
+			console.log("custom banner provided");
+		}
+
+		function adBlockNotDetected() {
+			console.log("=================");
+			console.log("Adblocker NOT enabled");
+			console.log("=================");
+			var script = document.createElement("script");
+			script.type = "text/javascript";
+			script.async = true;
+				if (script.readyState) {
+					script.onreadystatechange = function () {
+						if (script.readyState == "loaded" || script.readyState == "complete")
+						{
+							script.onreadystatechange = null;
+							startImAds();
+						}
+					}
+				}
+				else {
+					script.onload = startImAds
+				}
+				script.src = "//cdn.interactivemedia.net/live/GRIN_grin.com/live/globalAdTag.min.js";
+				var __is = document.getElementsByTagName('script')[0];
+				__is.parentNode.insertBefore(script, __is);
+				
+				function startImAds(){
+				
+					IM.GlobalAdTag.setZone('rest');
+				
+				IM.GlobalAdTag.setPageType('rubrik');
+				IM.GlobalAdTag.register('sb','Site_superbanner', false);
+				IM.GlobalAdTag.register('sky','skyscraperAd', false);
+				IM.GlobalAdTag.register('mrec','sidebarAd', false);
+			}
+			
+		};
+
+		if(typeof blockAdBlock === 'undefined') {
+			adBlockDetected();
+		} else {
+			blockAdBlock.setOption({ debug: true });
+			blockAdBlock.onDetected(adBlockDetected).onNotDetected(adBlockNotDetected);
+		}
+	}
+	
+	</script>
+
+
+		
+	
+
+
+		
+
+		
+	
+	
+	
+
+
+	<script type="text/javascript">
+		Grin.Loader.request_activation('grinenv.js', [], function() {
+			global.GrinEnv = JSON.parse('{"language_id":3,"lang":"en","country_id":117,"country":"KR","region":"world","one_time_royalty":"US$ 10.-","provision_book_processing_fee":"US$ -50.-","currency_id":2,"currency":"USD","affiliate_programm_provision":"US$ 3.-","realm":"grin","realm_id":1,"brand":"grin","brand_id":1,"i_am_grin":true,"has_mobile_storefront":true,"request_url":"https://www.grin.com/document/432082","request_hostname":"www.grin.com","request_path":"/document/432082","request_path_info":"","request_full_path":"/document/432082","request_query_string":"","request_protocol":"https","handler":"document","partner_id":0,"revision_number":"c7841dc9ffd6e215ee23426bd849019ea9465ace","revision_version":"stable / version-8.30.11-1-gc7841dc / c7841dc9ffd6e215ee23426bd849019ea9465ace","revision_buildtimestamp":"1532338765","revision_hash":"c78765","gtpl_template_scope":"storefront","i_am_mobile_scope":false,"i_am_mobile_device":false,"livehost":true,"testhost":"live","userAgent":"Python-urllib/3.6","browser":"other_browser","os":"other_os","i_am_server":true,"i_am_secure":true,"test_group":"B","test_gang":"WEST","test_bunch":3}');
+			global.GrinEnv.i_am_client = true;
+			global.GrinEnv.Login = JSON.parse('{"is_admin":false,"shoppingcart_account":null,"is_superuser":false,"auth_method":"NONE"}');
+
+			
+			
+			global.GrinCtx=global.GrinCtx || {};
+			global.GrinCtx.Options = JSON.parse('{"autoload-user-fields":":basic,initials,picture_thumb","base-href-acquisition-bookmarklet":"javascript:window.location=\'https://www.grin.com/login/#admin/acquisition?page=1&type=url&query=\'+window.location.toString().replace(/;.*$/,\'\')","base-href-admin":"https://www.grin.com/admin/","base-href-admin-account":"https://www.grin.com/admin/#account/$account_id$","base-href-admin-account-tab":"https://www.grin.com/admin/#account/$account_id$/$tab$","base-href-authors":"http://www.grin.com/authors","base-href-autocomplete-search-tags":"https://www.grin.com/rpc/tag_search?method=get_query","base-href-autosearch":"https://www.grin.com/rpc/autosearch?method=search","base-href-brand-file-image":"https://cdn.openpublishing.com/images/brand/$brand_id$/$path$","base-href-brand-file-static":"https://cdn.openpublishing.com/images/brand-static/$brand_id$/$path$","base-href-checkout-addresses":"https://www.grin.com/checkout/addresses","base-href-checkout-payment":"https://www.grin.com/checkout/payment","base-href-checkout-verification":"https://www.grin.com/checkout/verification","base-href-dictionary":"https://cdn.openpublishing.com/dictionary.js?langprefix=$langprefix$&brand_id=$brand_id$&gtpl_ns=$gtpl_ns$&lang=$lang$&callback=$callback$&gtpl-template-scope=$gtpl_template_scope$&r=$revision_hash$","base-href-dummy-image-folder":"https://cdn.openpublishing.com/images/brand/$brand_id$/dummys/","base-href-enumeration":"https://www.grin.com/enumeration/$lang$/$enumerations$?r=$revision_hash$","base-href-errorreport":"https://www.grin.com/rpc/errorreport","base-href-free_download":"https://www.grin.com/free_download?document_id=$document_id$&product_form=$product_form$&publication_type=$publication_type$","base-href-group":"http://www.grin.com/group/$ID$/$PATH$","base-href-images":"https://cdn.openpublishing.com/images/","base-href-json-file":"https://www.grin.com/json/$resource$.json?r=$revision_hash$","base-href-login":"https://www.grin.com/login/","base-href-login-account":"https://www.grin.com/login/#account","base-href-login-account-tab":"https://www.grin.com/login/#account/$tab$","base-href-login-document":"https://www.grin.com/login/#document/$document_id$","base-href-login-document-tab":"https://www.grin.com/login/#document/$document_id$/$tab$","base-href-login-story":"https://www.grin.com/login/#story/$story_id$","base-href-main":"https://www.grin.com/","base-href-master":"https://gs.openpublishing.com/","base-href-master-lang":"https://gs.openpublishing.com/master/#master/lang?page=1&type=string&query=$lang_id$&state=","base-href-master-main":"https://gs.openpublishing.com/master/","base-href-order_download":"https://www.grin.com/order_download/","base-href-pay_order":"https://www.grin.com/pay_order","base-href-preview-image":"https://cdn.openpublishing.com/grin-paper/$document_id$_$page_number$.jpg","base-href-profile-country-search":"http://www.grin.com/tag/profile/country/$country_id$","base-href-profile-state-search":"http://www.grin.com/tag/profile/state/$state$","base-href-realm-main":"http://www.grin.com/","base-href-resource":"https://www.grin.com/resource/","base-href-resource-search":"https://www.grin.com/rpc/resource_search/$classname$/?$queryparams$&page=$page$&display=$display$","base-href-resource-v2":"https://www.grin.com/resource/v2/","base-href-rpc":"https://www.grin.com/rpc/","base-href-search":"https://www.grin.com/search","base-href-shoppingcart":"https://www.grin.com/shoppingcart","base-href-static":"http://www.grin.com/$lang$/$module$","base-href-topic":"http://www.grin.com/topic/$keyword_normalized$","base-href-topics":"http://www.grin.com/topics","base-href-upload":"https://www.grin.com/$lang$/upload","base-href-upload-rpc":"https://www.grin.com/rpc/upload","cookie-domain":"www.grin.com","domain-xhr":"https://www.grin.com","enable-click-tracking":"no","enable-tracking":"yes","extern-href-google-maps-img":"https://maps.google.com/maps/api/staticmap?center=$street$,$city$,$country$&zoom=13&size=185x212&maptype=roadmap&markers=color:green|$street$,$city$,$country$&sensor=false","extern-href-google-maps-link":"https://maps.google.com/maps?f=q&source=s_q&hl=en&q=$street$,+$city$,+$country$&ie=UTF8&cd=2&geocode=FfB-3gIdxrqwAA&split=0&hq=&hnear=$street$,+$city$,+$country$&z=16","extern-href-trustedshop":"https://www.trustedshops.com/shop/certificate.php?shop_id=X1098E55B93A58BF003CB4E90E5AF4E73","extern-href-trustedshop-hausarbeiten":"https://www.trustedshops.com/shop/certificate.php?shop_id=X3E9B44D7C191BAEC3BC114194FEC381F","facebook-oauth-client-id":"5428913991","facebook-oauth-main-url":"https://www.grin.com/oauth/facebook/","google-oauth-client-id":"980913651444-g2hgb58i96r80dtn888bbonku4t0foku.apps.googleusercontent.com","google-oauth-main-url":"https://www.grin.com/oauth/google/","gtpl-template-scope":"storefront","href-admin":"https://www.grin.com/admin/#$hashpath$","href-admin-withparams":"https://www.grin.com/admin/#$hashpath$?$urlparams$","href-basedata-js":"https://cdn.openpublishing.com/basedata.js?lang=$lang$&brand_id=$brand_id$&gtpl-template-scope=$gtpl_template_scope$&r=$revision_hash$","href-blank-image":"https://cdn.openpublishing.com/images/commons/blank.gif","href-brand-file-subject-image":"https://cdn.openpublishing.com/images/brand-resource/$brand_id$/subject/$id$-$type$.png","href-cms-file":"https://cdn.openpublishing.com/images/cms/$cms_id$/$filename$","href-combine-css":"https://cdn.openpublishing.com/combine.css?file=$filelist$&type=$type$&brand_id=$brand_id$&r=$revision_hash$","href-combine-group-css":"https://cdn.openpublishing.com/group/css/$group$?brand_id=$brand_id$&r=$revision_hash$","href-combine-group-js":"https://cdn.openpublishing.com/group/js/$group$?brand_id=$brand_id$&r=$revision_hash$","href-combine-js":"https://cdn.openpublishing.com/combine.js?file=$filelist$&type=$type$&brand_id=$brand_id$&async_loader_code=$async_loader_code$&async_dependencies=$async_dependencies$&r=$revision_hash$","href-cover":"https://cdn.openpublishing.com/images/cover/e-book/$id$_$type$.jpg","href-cover-for-brand":"https://cdn.openpublishing.com/images/cover/brand/e-book/$brand_id$/$id$_$type$.jpg","href-generic-dummy-image":"https://cdn.openpublishing.com/images/brand/$brand_id$/dummys/$type$-$obj$.png","href-login":"https://www.grin.com/login/#$hashpath$","href-login-withparams":"https://www.grin.com/login/#$hashpath$?$urlparams$","href-main":"http://www.grin.com/$urlpath$","href-marketing-cover-for-brand":"https://cdn.openpublishing.com/images/cover/brand/marketing/$brand_id$/$id$_marketing.jpg","href-master":"https://gs.openpublishing.com/master/#$hashpath$","href-master-withparams":"https://gs.openpublishing.com/master/#$hashpath$?$urlparams$","href-picture":"https://cdn.openpublishing.com/images/picture/$id$-$hash$.jpeg","href-stylus":"https://cdn.openpublishing.com/stylus/$filename$?brand_id=$brand_id$&r=$revision_hash$","mobile-href-catalog":"https://m.grin.com/$CATAGLOGUE_LANG$/catalog/","mobile-href-home":"https://m.grin.com/$lang$/","mobile-href-main":"https://m.grin.com/","mobile-href-order_download":"https://m.grin.com/order_download/","mobile-href-tag-search":"https://m.grin.com/tag/$keyword$","mobile-storefront-media-condition":"only screen and (max-device-width: 640px)","report-all-errors":"yes","twitter-oauth-client-id":"5177","twitter-oauth-main-url":"https://www.grin.com/oauth/twitter/","accounting-import-completion-date":"2018-05-31","admin-feature-set":"full","convert-epub-to-mobi":"yes","enable-facebook-login":"yes","enable-google-login":"yes","invoice-csv-provison-statement-all-users":"no","manual-payout-percentage":"70.000","mykindle-sender":"kindle@openpublishing.com","onix-import-products":"ebook,book","payone-finance-gate-account-id":"18279","payone-finance-gate-client-api-url":"https://secure.pay1.de/client-api/","payone-finance-gate-creditcard-verification-hash":"d7a3699fbae2443f24f87e8deec5e906","payone-finance-gate-merchand-id":"18230","payone-finance-gate-mode":"live","payone-finance-gate-portal-id":"2013092","payone-finance-gate-pseudo-creditcard-verification-hash":"63a8f58f5ab7e46e3a012305f5b713a3","payone-finance-gate-regular-bankaccount-verification-hash":"d7e935faa29a2bfcf7352fd49e4c1355","require-admin-auth":"yes","require-brand-for-publication":"yes","reseller":"","support-author-statement-generation":"yes","support-epub-patching":"yes","support-itunes-dead-links-detection":"yes","support-pdf-patching":"yes","support-profile":"no","type_of_edition_defaults":"Originalausgabe;überarbeitete Neuauflage","contractor_name_de":"Open Publishing GmbH","contractor_name_en":"Open Publishing GmbH","google_anayltics_tracking_code":"","google_tag_manager_id":"GTM-N4P5KV","mobile-contact-page-description":"Page::Contact::Description","mobile-contact-page-title":"Page::Contact::Title","pagetitle-brandname":"GRIN","pagetitle-index":"Page::Title::Index","rightofwithdrawal_url":"http://www.grin.com/termsofservice.html#withdrawal","termsofservice_url":"http://www.grin.com/termsofservice.html"}')
+
+			delete global.GrinEnv.i_am_server;
+			
+			
+		});
+	</script>
+
+	<script type="text/javascript">
+		
+			Grin.Loader.request_activation('ready.js', Grin.Ready.dependencies, function() {
+				jQuery(function() {
+					for(var i = 0; i< Grin.Ready.ready_queue.length; ++i) {
+						Grin.Ready.ready_queue[i].call(this);
+					}
+					Grin.Ready.ready_triggered=true;
+				});
+			});
+		
+	</script>
+
+	</body>
+</html>

@@ -1,0 +1,7 @@
+To be effective instructors and CS education researchers , we must identify and understand student difficulties surrounding core computing topics . 
+This study examines student difficulties with the basic data structures commonly found in CS2 courses . 
+Initial exploration of student thinking began with think-aloud interviews with students . 
+These interviews centered on open-ended questions that were iteratively improved upon based on analysis of interview transcripts . 
+The revised open-ended questions were then posed to 249 students during an end-of-term final exam study session . 
+Using the explanations and justifications included by students , responses to the questions were coded and summarized . 
+This work characterizes the difficulties revealed by student responses , and provides details of their prevalence among the examined student population . 
