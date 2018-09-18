@@ -21,11 +21,11 @@ def extract_sents(text):
         txt['content'] = text
     else:
         if Abstract_start == -1:  # 'ABSTRACT'를 찾은 경우
-            abstract_start = ABSTRACT_start + 'ABSTRACT'.__len__()
+            abstract_start = ABSTRACT_start + 'ABSTRACT'.__len__() + 1
         elif ABSTRACT_start == -1:  # 'Abstract'를 찾은 경우
-            abstract_start = Abstract_start + 'Abstract'.__len__()
+            abstract_start = Abstract_start + 'Abstract'.__len__() + 1
         else:
-            abstract_start = min(Abstract_start, ABSTRACT_start) + 'Abstract'.__len__()
+            abstract_start = min(Abstract_start, ABSTRACT_start) + 'Abstract'.__len__() + 1
 
         text = text[abstract_start:].strip()
         pattern = re.compile('\n\s*\n+')

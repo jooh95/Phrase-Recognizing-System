@@ -1,0 +1,4 @@
+Raspberry Pi is a single board , high performance computer . 
+We areusing this system to extract text from a document and convertit to audio for the use of visually impaired persons . 
+Through this device , we want to enable our users to hear the contents of the text image . 
+Concepts of Optical Character Recognition and Text to Speech Synthesis has been combined in this project . 
