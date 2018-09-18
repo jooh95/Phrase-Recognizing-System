@@ -5,3 +5,9 @@ parsing/.idea/modules.xml
 parsing/.idea/misc.xml
 .DS_Store
 *.xml
+pdf2txt/pdfData
+pdf2txt/txtData
+pdf2txt/pdfExample
+pdf2txt/txtExample
+pdf2txt/sents
+pdf2txt/__pycache__
