@@ -1,8 +1,0 @@
-Artificial Neural Network plays a vital role in Pattern Matching . 
-This analysis is beneficial for pruning the neural network architecture additionally as factors governing the training time and overall performance of Multiple hidden layer back propagation neural network . 
-Now a days , artificial intelligence have terribly very important role in day to day life . 
-whether it 's Finger print recognition or Face detection , artificial intelligence found its usability . 
-what is more accuracy is becoming a chief criteria of competition among numerous corporations that develop applications and product based on artificial intelligence . 
-Multiple hidden layers ar used wherever it 's troublesome to make a decision the amount of neurons in each hidden layer . 
-Here we have a tendency to created associate degree approach in pruning a multiple hidden layer fulfilling all “ Rule of Thumb ” [ 2 ] until utilized in making associate degree optimized design in neural network . 
-additionally time complexness analysis of multiple hidden layers with single/dual hidden layer design is bestowed in this paper . 

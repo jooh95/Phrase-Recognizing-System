@@ -1,2 +1,0 @@
-Monads are a popular feature of the programming language Haskell because they can model many di↵erent notions of computation in a uniform and purely functional way . 
-Our particular interest here is the probability monad , which can be –and has been– used to synthesise models for probabilistic programming . 

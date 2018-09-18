@@ -1,8 +1,0 @@
-Today the healthcare industry is experiencing one of the most imperative and testing transitions to date , the move from paper to electronic healthcare records . 
-While the healthcare industry has for the most part been an incrementally propelling field , this change can possibly be revolutionarily . 
-Utilizing the data gathered from these electronic records energizing apparatuses , for example , disease recommendation systems have been made to convey personalized models of a person 's health profile . 
-Anyway in spite of their initial achievement , apparatuses , for example , these will soon experience a huge issue . 
-The measure of healthcare experience data gathered is expanding radically , and the computational time for these applications will soon achieve a time when these systems can never again function in a viable timeframe for clinical use . 
-This paper will start by dissecting the performance limitations of the personalized disease prediction engine CARE ( Collaborative Assessment and Recommendation Engine ) . 
-Next it will detail the creation and performance of another single patient implementation of the algorithm . 
-At last this work will demonstrate a novel parallel implementation of the CARE algorithm , and demonstrate the performance benefits on big patient data . 

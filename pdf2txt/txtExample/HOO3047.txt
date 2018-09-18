@@ -1,9 +1,0 @@
-Every object has its unique spectral ’ signature ’ over the electromagnetic spectrum , and this can be captured using hyperspectral sensors . 
-In this project , we use these signatures for discriminating different types of plants . 
-It has been shown that machine learning algorithms are very powerful at learning patterns . 
-They have already been utilized for classiﬁcation tasks in various ﬁelds . 
-Indian pines dataset1 is used for testing and other measurements . 
-Treating the hyperspectral bands in the images as features and each pixel as a sample , we classify plants with convolutional neural networks ( CNN ) and support vector machines ( SVM ) . 
-Furthermore , we optimize CNN to prevent overﬁtting , accelerate inference , and reduce the resources it uses with respect to memory , battery and computational power . 
-The results demonstrate that CNN is very successful in hyperspectral image classiﬁcation tasks and optimizations further increase its accuracy . 
-We achieved 83.9 % test accuracy using SVM with Polynomial kernel , and successfully achieved 99.2 % with CNN . 

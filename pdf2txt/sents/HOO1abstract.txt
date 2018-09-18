@@ -1,8 +1,0 @@
-— Diverse malware programs are set up daily aiming the attack of computer systems without the knowledge of their users . 
-While some authors of these programs intend to steal secret information , others try quietly to prove their competence and aptitude . 
-In order to encounter these malicious codes , antivirus programs rely basically on the traditional signature-based static technique . 
-Although this technique excels at blocking known malware , it can never intercept new ones . 
-Some antivirus programs may introduce the dynamic technique , which is often based on running the executables on a virtual environment . 
-The major drawbacks of this technique are the long period of scanning and the high consumption of resources . 
-Nowadays , recent antivirus programs introduce a third technique , the heuristic technique based on machine learning , which has proven its success in several areas based on the processing of huge amounts of data . 
-In this paper , we expand on this latter technique , and classify its different approaches , according to their performance in the detection of malware . 
