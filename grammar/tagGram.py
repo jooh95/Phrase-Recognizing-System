@@ -4,7 +4,7 @@ import re
 
 s3 = boto3.resource('s3')
 bucket = s3.Bucket('learningdatajchswm9')
-pattern = re.compile('sentences/.+abstract[.]txt')
+pattern = re.compile('sents/.+abstract[.]txt')
 
 extag = [',', '(', ')', ':', "''", 'LS']
 

@@ -9,9 +9,10 @@ def lemmatize(text):
     sentences = [nltk.pos_tag(nltk.word_tokenize(sentence)) for sentence in nltk.sent_tokenize(text)]
     print(sentences)
 
-    result = ''
+    result = []
 
     for sentence in sentences:
+        tmp = []
         for tup in sentence:
             word = tup[0]
             tag = tup[1]
@@ -31,13 +32,13 @@ def lemmatize(text):
             elif tag in noun_set:
                 word = singularize(word)
 
-            result += word + ' '
+            tmp.append(word)
 
-        result += '\n'
+        result.append(tmp)
 
     return result
 
 
-text = '''I have a fish .
-The fish is dead after going out of water .'''
+text = '''Now a days , artificial intelligence have terribly very important role in day to day life . 
+whether it 's Finger print recognition or Face detection , artificial intelligence found its usability . '''
 print(lemmatize(text))
