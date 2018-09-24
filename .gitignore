@@ -1,3 +1,4 @@
+.DS_Store
 grammar/*
 !grammar/*.py
 pdf2txt/*
