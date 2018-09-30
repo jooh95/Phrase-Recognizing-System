@@ -3,3 +3,6 @@ grammar/*
 !grammar/*.py
 pdf2txt/*
 !pdf2txt/*.py
+sentence_generation/*
+!sentence_generation/*.py
+!sentence_generation/sentences.txt
