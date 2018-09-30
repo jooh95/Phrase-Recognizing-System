@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <GeneratedFeatureId>2477394d-873c-4a1a-8ffb-dd5d47dbe4bc</GeneratedFeatureId>
+    <GeneratedPackageId>897056b3-4af9-477a-a9ab-3ef0d0c8c4c5</GeneratedPackageId>
+    <GeneratedModuleId>{20131dd0-c2a0-415d-a60b-34c30de5c4c3}</GeneratedModuleId>
+    <GeneratedListId>{2dd867a1-35d3-4f9c-821c-c288aa6a17c6}</GeneratedListId>
+    <GeneratedProductId>{517cfb64-bfe1-40b2-9e87-b89b98e8dd17}</GeneratedProductId>
+    <GeneratedAppVersion>1.0.0.0</GeneratedAppVersion>
+    <GeneratedClientSecret>+gvR7GtZVxqglcvhL55wJm5d5C+oqt/GlIy+082l6UE=</GeneratedClientSecret>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+</Project>
