@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{F7533647-613D-4DB9-A507-665508495F72}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../Library/Frameworks/Mono.framework/Versions/5.10.1/lib/mono/msbuild/15.0/bin/Microsoft.Common.CurrentVersion.targets">
+    <Files>
+      <File FileName="../../../../Library/Frameworks/Mono.framework/Versions/5.10.1/lib/mono/msbuild/15.0/bin/Microsoft.Common.CurrentVersion.targets" Line="2072" Column="45" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.WordWebAddIn1Web PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
