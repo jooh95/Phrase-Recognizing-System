@@ -32,7 +32,7 @@
         var xmlhttp = new XMLHttpRequest();
 
         // Or post, etc
-        xmlhttp.open("GET", proxy + myUrl + '?key=AIzaSyBCXxskVOciO7tlqD7-RR56MrFQGitL-30&q=' + dragged + '&source=en&target=ko&format=text', true);
+        xmlhttp.open("GET", proxy + myUrl + '?key=k&q=' + dragged + '&source=en&target=ko&format=text', true);
 
         xmlhttp.send();
 
@@ -56,8 +56,8 @@
     function sendToNaver(dragged) {
         $('#r_naver').html('<h3>Naver</h3><ul></ul>');
 
-        var client_id = 'At6lwF90bRMIsbBimkcX';
-        var client_secret = 'rBdlOrjTPR';
+        var client_id = 'k';
+        var client_secret = 'k';
 
         var query = dragged;
 
