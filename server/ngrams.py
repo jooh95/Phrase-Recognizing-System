@@ -21,10 +21,22 @@ from keras.layers.embeddings import Embedding
 from keras.layers import Dense, Activation
 from keras.models import Sequential, load_model
 from keras.utils.data_utils import get_file
-
+import sys
 import numpy as np
 import string
 import gensim
+import chardet
+import pymysql.cursors
+conn = pymysql.connect(
+                       host='localhost',
+                       user='strutive07',
+                       password='lucys2&&Ekfrlo',
+                       db='ngrams',
+                       charset='utf8'
+                       )
+import pymongo
+mongo_conn = pymongo.MongoClient('mongodb://root:sniperzkzl@localhost:27017')
+db = mongo_conn.thesaurus
 
 class SmallerThenTrigram(Exception):
     pass
@@ -159,16 +171,26 @@ def get_synonyms(word):
     return synonyms
 
 
+def get_name(synset):
+    if (type(synset) != int):
+        return {'word': synset.name().partition('.')[0], 'type': synset.name().partition('.')[2][0]}
+    return {'word': "None", type: "NotWord"}
+
+
 def get_max_wup_similarity(src, target):
     max_value = 0
     max_el = -1
-    # print(src, target)
+    #     print(src, target)
     for s in wordnet.synsets(src):
         for t in wordnet.synsets(target):
             try:
-                if (s == t): continue
+                if (s == t):
+                    #                     print("con")
+                    continue
+                #                 print(s, t)
 
-                similarity = s.wup_similarity(t)
+                similarity = s.path_similarity(t)
+                #                 print('similarity',similarity)
                 # print(max_value, similarity)
                 if (max_value < similarity):
                     max_value = similarity
@@ -181,40 +203,81 @@ def get_max_wup_similarity(src, target):
         return max_el[0], max_el[1], max_value
 
 
-def get_name(synset):
-    if (type(synset) != int):
-        return {'word': synset.name().partition('.')[0], 'type': synset.name().partition('.')[2][0]}
-    return {'word': "None", type: "NotWord"}
+def chunk2word(word):
+    word = word[2:-1]
+    data = word.split('-')
+    return_word = ""
+    for w in data:
+        return_word += " " + w
+    #     print(return_word)
+    return return_word.strip()
 
 
-def prediction(word_triple, mode=0):
+def get_similarity_by_chunked_data(src, target):
+    collection = db.thesaurus_33
+    if (target[0] == '<'):
+        target = chunk2word(target)
+        # print(target)
+        mtarget = collection.find_one({"word": target})
+        try:
+            mtarget = mtarget['synonyms']
+        except Exception as e:
+            return -1, -1, -1
+        max_value = -1
+        max_target = -1
+        max_src = -1
+        for mt in mtarget:
+            for t in mt:
+                ssrc, starget, svalue = get_max_wup_similarity(src, t)
+                if (svalue == -1): continue
+                if (svalue > max_value):
+                    max_src = ssrc
+                    max_target = starget
+                    max_value = svalue
+        return max_src, max_target, max_value
+    else:
+        return get_max_wup_similarity(src, target)
+
+
+def prediction(word_tuple, param_target, mode=0):
     # mode = 0 -> Right Prediction
     # mode = 1 -> Left Prediction
     max_src = 0
     max_target = 0
     max_value = 0
     pred = []
+    if (param_target[0] == '<'):
+        param_target = chunk2word(param_target)
+    # print(param_target)
 
     if (mode == 0):
-        l = (word_triple[0], word_triple[1])
+        try:
+            with conn.cursor() as cursor:
+                sql = """SELECT * from v2_content_trigrams WHERE first=%s AND second=%s ORDER BY count DESC LIMIT 50"""
+                cursor.execute(sql, word_tuple)
+                rows = cursor.fetchall()
+                for i, row in enumerate(rows):
+                    # print(row)
+                    if (row[4] <= 1):
+                        break
+                    space_probability = row[4]
 
-        for k in toRight_tri2bi[l]:
-            if (k[1] <= 1): break;
-            space_probability = k[1]
-            src, target, value = get_max_wup_similarity(word_triple[2], k[0][2])
-            if (value == -1): continue
-            cvalue = value * value * math.log(space_probability)
-            pred.append({"src": get_name(src), "target": get_name(target), "value": cvalue})
-    else:
-        l = (word_triple[1], word_triple[2])
+                    src, target, value = get_similarity_by_chunked_data(param_target, row[3])
+                    if (value == -1):
+                        score = math.log(space_probability)
+                        score = score * math.log(i + 1)
+                        pred.append({"src": param_target, "target": row[3], "value": score})
+                    else:
+                        score = value * 100 * math.log(space_probability)
+                        pred.append({"src": get_name(src), "target": get_name(target), "value": score})
 
-        for k in toLeft_tri2bi[l]:
-            if (k[1] <= 1): break;
-            space_probability = k[1]
-            src, target, value = get_max_wup_similarity(word_triple[0], k[0][0])
-            if (value == -1): continue
-            cvalue = value * value * math.log(space_probability)
-            pred.append({"src": get_name(src), "target": get_name(target), "value": cvalue})
+        #                     print({"src": get_name(src), "target": get_name(target), "value": score})
+
+        except Exception as e:
+            _, _, tb = sys.exc_info()  # tb -> traceback object
+            print('file name = ', __file__)
+            print('error line No = {}'.format(tb.tb_lineno))
+            print(['error'], e)
     if (len(pred) == 0): return pred
     return sorted(pred, key=lambda x: -x['value'])[:5]
 
@@ -250,28 +313,43 @@ def sample2(preds, temperature=1.0, num_generated = 1):
   return probas
 
 
-def predict_next_lstm(text, num_generated = 8):
+def sample2(preds, temperature=1.0, num_generated=1):
+    if temperature <= 0:
+        return np.argmax(preds)
+    preds = np.asarray(preds).astype('float64')
+    preds = np.log(preds) / temperature
+    exp_preds = np.exp(preds)
+    preds = exp_preds / np.sum(exp_preds)
+    probas = np.random.multinomial(num_generated, preds, 1)
+    return probas
+
+
+def predict_next_lstm(text, num_generated=1):
     word_idxs = []
+    print(text)
     for word in nltk.word_tokenize(text):
         tmp_word_idx = word2idx(word)
         if tmp_word_idx == 'ERROR':
-          return 'ERROR'
+            return 'ERROR'
         word_idxs.append(tmp_word_idx)
-#     print(word_idxs)
+    print(word_idxs)
     prediction = lstm_model.predict(x=np.array(word_idxs))
-#     print(prediction)
+    print(prediction)
     probas = sample2(prediction[-1], 0.7, num_generated)
-#     print(probas.shape)
+
+    ind = np.argpartition(probas, -num_generated)[-num_generated:]
+    # plot_model(model, to_file='model.png')rated:]
+    #     print(probas.shape)
     i = 0
     res = []
     for l in probas[0]:
-        if(l != 0):
+        if (l != 0):
             res.append(idx2word(i))
-        i+= 1
+        i += 1
     return res
 
 def main(isSaved=True):
-    os.chdir("./next_data")
+    
     print('get corpus data')
     global data
     data = ""
@@ -292,22 +370,22 @@ def main(isSaved=True):
     if isSaved == True:
         print('saved mode')
         print('get ngrams data')
-        tri_fdist = get_ngrams_saved(3)
-        bi_fdist = get_ngrams_saved(2)
+#        tri_fdist = get_ngrams_saved(3)
+        #bi_fdist = get_ngrams_saved(2)
         # four_fdist = get_ngrams_saved(4)
         # five_fdist = get_ngrams_saved(5)
-        print('get ngram dict data')
-        with open('toRight_tri2bi.bin', 'rb') as f:
-            toRight_tri2bi = pickle.load(f)
-        with open('toLeft_tri2bi.bin', 'rb') as f:
-            toLeft_tri2bi = pickle.load(f)
+#        print('get ngram dict data')
+#        with open('toRight_tri2bi.bin', 'rb') as f:
+#            toRight_tri2bi = pickle.load(f)
+#        with open('toLeft_tri2bi.bin', 'rb') as f:
+#            toLeft_tri2bi = pickle.load(f)
 
-        word_model = Word2Vec.load('word2vecData.model')
+        word_model = Word2Vec.load('../data/word2vecData.model')
         pretrained_weights = word_model.wv.syn0
         vocab_size, emdedding_size = pretrained_weights.shape
         print('Result embedding shape:', pretrained_weights.shape)
-        lstm_model = load_model('word2vec_lstm_gen.model')
-        print(predict_next_lstm('weights can only', 1))
+        lstm_model = load_model('../data/word2vec_lstm_gen.model')
+        print('prediction', predict_next_lstm('weight can only', 1))
         # with open('fivegrams_middle.bin', 'rb') as f:
         #     fivegrams_middle = pickle.load(f)
     # else:
