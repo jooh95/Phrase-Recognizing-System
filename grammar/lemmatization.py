@@ -1,5 +1,5 @@
 import nltk
-from pattern3.en import conjugate, singularize
+from pattern3.text import conjugate, singularize
 
 verb_set = {'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ'}
 noun_set = {'NN', 'NNS', 'NNP', 'NNPS'}
