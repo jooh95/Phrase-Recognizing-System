@@ -15,6 +15,7 @@
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
 
     <script src="Result.js" type="text/javascript"></script>
+    <script src="worker.js" type="text/javascript"></script>
 
     <!-- Office.js에 대한 로컬 참조를 사용하여 오프라인 디버깅을 사용하도록 설정하려면 다음을 사용합니다.                        -->
     <!-- <script src="Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
@@ -28,6 +29,9 @@
     <!-- link rel="stylesheet" href="Content/fabric.components.min.css" -->
 </head>
 <body class="is-preload">
+
+    <div id="tmp_content" style="visibility: hidden;"></div>
+    <div id="tmp_dragged" style="visibility: hidden;"></div>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -61,14 +65,14 @@
                 </div>
                 <h2>번역 결과</h2>
                 <div id="r_google">
-                    <h3>Google</h3>
+
                     <ul>
 
                     </ul>
                 </div>
 
                 <div id="r_naver">
-                    <h3>Naver</h3>
+
                     <ul>
 
                     </ul>
