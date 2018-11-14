@@ -12,12 +12,17 @@
                 //채워야함.
                 return;
             }
-            
-            
+
+
             $('#rec_button').click(recommendSentence);
+            $('#paper_button').click(recommendPaper);
             $('#hist_button').click(showHistory);
         });
     };
+
+    function recommendPaper() {
+        document.location.href = "Paper.html";
+    }
 
     function sendToGoogle(dragged) {
         $('#r_google').html('<h3>Google</h3><ul></ul>');
@@ -31,7 +36,7 @@
         var xmlhttp = new XMLHttpRequest();
 
         // Or post, etc
-        xmlhttp.open("GET", proxy + myUrl + '?key=apikey&q=' + dragged + '&source=en&target=ko&format=text', true);
+        xmlhttp.open("GET", proxy + myUrl + '?key=AIzaSyBCXxskVOciO7tlqD7-RR56MrFQGitL-30&q=' + dragged + '&source=en&target=ko&format=text', true);
         xmlhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
         xmlhttp.send();
 
@@ -55,7 +60,7 @@
     function sendToNaver(dragged) {
         $('#r_naver').html('<h3>Kakao</h3><ul></ul>');
 
-        var client_id = 'apikey';
+        var client_id = 'KakaoAK 8ee4cb57a2fefea0816aab7090190b44';
         //var client_secret = '1IjcbfdwKl';
 
         var myUrl = "https://kapi.kakao.com/v1/translation/translate";
@@ -91,7 +96,6 @@
             //}
             var word = jsonData["translated_text"];
             $('#r_naver ul').append("<li><label>" + word + '</label></li>');
-
         };
     }
 
@@ -111,24 +115,24 @@
         xmlhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
         xmlhttp.send();
 
-            xmlhttp.onload = function () {
+        xmlhttp.onload = function () {
 
-                var jsonData = JSON.parse(this.responseText);
+            var jsonData = JSON.parse(this.responseText);
 
-                var word = jsonData["data"]["translations"][0]["translatedText"];
+            var word = jsonData["data"]["translations"][0]["translatedText"];
 
-                console.log(pos);
-                $('#button' + pos).append(" : " + word);
-            };
+            console.log(pos);
+            $('#button' + pos).append(" : " + word);
+        };
 
-        
+
     }
 
     function getRecommendList(dragged) {
         Word.run(function (context) {
             return context.sync()
                 .then(function () {
-                    
+
 
                     var whole_text = $("#tmp_content").text();
 
@@ -172,7 +176,7 @@
                             count++;
 
                         }
-                  
+
                         for (var i = 0; i < jsonData["word2vec"].length; i++) {
                             var word = jsonData["word2vec"][i]["word"];
                             console.log(word);
@@ -190,13 +194,13 @@
         })
         .catch(errorHandler);
 
-       
+
     }
 
     function sendHistory(dragged, changed) {
-        
+
         Word.run(function (context) {
-            
+
             return context.sync()
                 .then(function () {
                     //$('#r_result').html('<h3>Naver</h3><ul></ul>');
@@ -248,7 +252,7 @@
             console.log(this.responseText);
             var jsonData = JSON.parse(this.responseText);
 
-            for (var i = 0; i < jsonData["result"].length; i++) {
+            for (var i = jsonData["result"].length - 1; i >= jsonData["result"].length - 5; i--) {
                 var before = jsonData["result"][i]["before"];
                 var after = jsonData["result"][i]["after"];
                 $('#history_main').append("<div><ul><li> 원래 단어 : " + before + " -> 수정한 단어 : " + after + "</div></li></ul>");
@@ -265,22 +269,20 @@
             var dragged = context.document.getSelection();
             //context.load(dragged, 'text');
             context.document.body.clear();
-
             whole_text = whole_text.replace($("#tmp_dragged").text(), event.data.word);
             console.log("tmp_dragged : " + $("#tmp_dragged").text());
             console.log("btn_word : " + event.data.word);
             console.log("whole_text : " + whole_text);
-
             context.document.body.insertText(whole_text, 'Start');
+            //console.log("clear");
 
-            $("#tmp_content").text(context.document.body.text);
+            //$("#tmp_content").text(context.document.body.text);
 
-            
+
             // 범위 선택 결과를 로드하는 명령을 큐에 넣습니다.
 
             return context.sync()
                 .then(function () {
-                    
 
                     sendHistory(event.data.dragged, event.data.word);
                 });
@@ -308,7 +310,7 @@
 
         })
         .catch(errorHandler);
-        
+
     }
 
     function noHistory() {
@@ -316,24 +318,24 @@
     }
 
     function recommendSentence() {
-        
+
         Word.run(function (context) {
 
             noHistory();
-            
+
             var documentBody = context.document.body;
 
             var dragged = context.document.getSelection();
 
             context.load(dragged, 'text');
-            
+
             context.document.getSelection().insertText("<31fe0826-7bb3-444d-8f2e-6ca06ae24e11>", 'Start');
 
             context.load(documentBody, 'text');
 
             context.document.getSelection().clear();
             //documentBody.insertText(original, 'Start');
-            
+
             //documentBody.clear();
 
             return context.sync()
@@ -347,7 +349,7 @@
 
                     getRecommendList(dragged.text);
                     //vocabHistory(dragged.text);
-                    
+
                     //writeFile("text.txt", dragged.text);
                     //console.log(para.items[0].clear());
                     context.document.getSelection().insertText(dragged.text, 'Start');
@@ -355,14 +357,14 @@
                     sendToGoogle(dragged.text);
 
                     sendToNaver(dragged.text);
-                    
+
                 });
 
         })
         .catch(errorHandler);
     }
 
-    
+
 
 
     //$$(Helper function for treating errors, $loc_script_taskpane_home_js_comment34$)$$
