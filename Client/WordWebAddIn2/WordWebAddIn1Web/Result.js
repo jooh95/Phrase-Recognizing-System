@@ -36,7 +36,7 @@
         var xmlhttp = new XMLHttpRequest();
 
         // Or post, etc
-        xmlhttp.open("GET", proxy + myUrl + '?key=AIzaSyBCXxskVOciO7tlqD7-RR56MrFQGitL-30&q=' + dragged + '&source=en&target=ko&format=text', true);
+        xmlhttp.open("GET", proxy + myUrl + '?key=apikey&q=' + dragged + '&source=en&target=ko&format=text', true);
         xmlhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
         xmlhttp.send();
 
@@ -60,7 +60,7 @@
     function sendToNaver(dragged) {
         $('#r_naver').html('<h3>Kakao</h3><ul></ul>');
 
-        var client_id = 'KakaoAK 8ee4cb57a2fefea0816aab7090190b44';
+        var client_id = 'apikey';
         //var client_secret = '1IjcbfdwKl';
 
         var myUrl = "https://kapi.kakao.com/v1/translation/translate";
