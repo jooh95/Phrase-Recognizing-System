@@ -10,3 +10,5 @@ similar-sentence/GoogleNews-vectors-negative300.bin.gz
 similar-sentence/*.csv
 paragraph-vector/*
 !paragraph-vector/*.ipynb
+doc2vec/*
+!doc2vec/*.ipynb
