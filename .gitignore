@@ -13,3 +13,5 @@ paragraph-vector/*
 !paragraph-vector/*.ipynb
 doc2vec/*
 !doc2vec/*.ipynb
+statistics/*
+!statistics/*.ipynb
