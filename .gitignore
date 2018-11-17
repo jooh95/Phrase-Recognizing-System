@@ -3,6 +3,17 @@ grammar/*
 !grammar/*.py
 pdf2txt/*
 !pdf2txt/*.py
+!pdf2txt/*.ipynb
 sentence_generation/*
 !sentence_generation/*.py
 !sentence_generation/sentences.txt
+similar-sentence/GoogleNews-vectors-negative300.bin.gz
+similar-sentence/*.csv
+paragraph-vector/*
+!paragraph-vector/*.ipynb
+doc2vec/*
+!doc2vec/*.ipynb
+statistics/*
+!statistics/*.ipynb
+.idea/workspace.xml
+.idea/inspectionProfiles/profiles_settings.xml

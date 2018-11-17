@@ -7,7 +7,7 @@ noun_set = {'NN', 'NNS', 'NNP', 'NNPS'}
 
 def lemmatize(text):
     sentences = [nltk.pos_tag(nltk.word_tokenize(sentence)) for sentence in nltk.sent_tokenize(text)]
-    print(sentences)
+    # print(sentences)
 
     result = []
 
@@ -39,6 +39,10 @@ def lemmatize(text):
     return result
 
 
-text = '''Now a days , artificial intelligence have terribly very important role in day to day life . 
-whether it 's Finger print recognition or Face detection , artificial intelligence found its usability . '''
-print(lemmatize(text))
+text = '''IPD as every method even though it has great features, it also has some issues.'''
+lemmatized = lemmatize(text)
+# print(lemmatized)
+for sent in lemmatized:
+    for word in sent:
+        print(word, end=' ')
+    print()
